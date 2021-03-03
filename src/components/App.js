@@ -35,13 +35,14 @@ function App() {
   // console.log(filterCharacters);
 
   const renderDetail = (props) => {
+    console.log(props);
     const id = props.match.params.id;
 
     const selectedCharacter = characters.find((character) => {
       return character.id === id;
     });
     if (selectedCharacter) {
-      return <CharacterDetail character={filterCharacters} />;
+      return <CharacterDetail character={selectedCharacter} />;
     }
   };
 

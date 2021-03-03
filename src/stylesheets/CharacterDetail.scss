@@ -2,11 +2,24 @@
 @import './core/Variables.scss';
 @import './core/Mixins.scss';
 
+.modal {
+  &__bg {
+    position: fixed;
+    z-index: 998;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #30475e63;
+  }
+}
+
 .detail {
   margin: rem(10);
   padding: rem(10);
-  // width: 300px;
-  // height: 230px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: rem(36) rem(36) rem(36) rem(36) rem(36) rem(36);
