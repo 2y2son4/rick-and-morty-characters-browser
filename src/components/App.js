@@ -11,8 +11,7 @@ import CharacterList from './CharacterList';
 function App() {
   // hooks
   const [characters, setCharacters] = useState([]);
-
-  const [name, setName] = useState([]);
+  const [name, setName] = useState('');
 
   // call to API
   useEffect(() => {
