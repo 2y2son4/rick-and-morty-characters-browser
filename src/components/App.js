@@ -14,11 +14,19 @@ function App() {
   useEffect(() => {
     Api().then((data) => setCharacters(data));
   }, []);
-  console.log(characters);
+
+  const handleFilter = (input) => {
+    console.log('Me han cambiado', input.value, input.key);
+
+    if (input.value === 'character') {
+      setCharacters(input.value);
+    }
+  };
+
   return (
     <div className="App App-header">
       <Header />
-      <Filters />
+      <Filters handleFilter={handleFilter} />
       <CharacterList characters={characters} />
       <Footer />
     </div>
