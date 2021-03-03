@@ -1,3 +1,68 @@
 @import './core/Functions.scss';
 @import './core/Variables.scss';
 @import './core/Mixins.scss';
+
+.card {
+  margin: rem(10);
+  padding: rem(10);
+  // width: 300px;
+  // height: 230px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: rem(36) rem(36) rem(36) rem(36) rem(36) rem(36);
+  border-radius: rem(20);
+  border: white solid rem(10);
+  color: #163f4b;
+  text-align: left;
+  background-color: #9dd4e4;
+  transition: transform 0.5s linear, background-color 0.5s linear, color 0.5s linear;
+  &:hover {
+    transform: scale(1.05);
+    background-color: #61dafb;
+    color: #282c34;
+  }
+  &__img {
+    width: rem(130);
+    border-radius: 30%;
+    // margin: auto;
+    grid-column: 1 / 2;
+    grid-row: 1/5;
+    // padding: 10px;
+  }
+  &__name {
+    font-size: rem(20);
+    padding-top: rem(10);
+    // padding-left: 15px;
+    grid-column: 1/3;
+    grid-row: 6/7;
+  }
+  &__text {
+    &--gender {
+      grid-column: 2/3;
+      grid-row: 1/2;
+    }
+    &--status {
+      grid-column: 2/3;
+      grid-row: 2/3;
+    }
+    &--location {
+      width: 150px;
+      grid-column: 2/3;
+      grid-row: 3/5;
+    }
+    &--origin {
+      font-size: rem(14);
+      padding-top: rem(10);
+      width: rem(150);
+      grid-column: 2/3;
+      grid-row: 5/6;
+    }
+    &--status,
+    &--gender,
+    &--location,
+    &--origin {
+      font-size: rem(16);
+      padding-left: rem(10);
+    }
+  }
+}

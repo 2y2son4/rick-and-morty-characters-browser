@@ -1,5 +1,5 @@
 import React from 'react';
-import Character from './Character';
+import CharacterCard from './CharacterCard';
 import '../stylesheets/CharacterList.scss';
 
 const CharacterList = (props) => {
@@ -8,7 +8,7 @@ const CharacterList = (props) => {
     const { id } = character;
     return (
       <li className="list__item card" key={id}>
-        <Character character={character} />
+        <CharacterCard character={character} />
       </li>
     );
   });
