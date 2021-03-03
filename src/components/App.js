@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import '.././stylesheets/App.scss';
 // import PropTypes from 'prop-types';
-// import { Link, Route, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import Api from '../services/api';
 import Header from './Header';
 import Footer from './Footer';
 import Filters from './Filters';
 import CharacterList from './CharacterList';
+import CharacterDetail from './CharacterDetail';
 
 function App() {
   // hooks
@@ -31,13 +32,28 @@ function App() {
   const filterCharacters = characters.filter((character) => {
     return character.name.toUpperCase().includes(name.toUpperCase());
   });
-  console.log(filterCharacters);
+  // console.log(filterCharacters);
+
+  const renderDetail = (props) => {
+    const id = props.match.params.id;
+
+    const selectedCharacter = characters.find((character) => {
+      return character.id === id;
+    });
+    if (selectedCharacter) {
+      return <CharacterDetail character={filterCharacters} />;
+    }
+  };
+
   return (
     <div className="App App-header">
       <Header />
       <Filters handleFilter={handleFilter} />
       <CharacterList characters={filterCharacters} />
       <Footer />
+      <Switch>
+        <Route path="/character/:id" render={renderDetail} />
+      </Switch>
     </div>
   );
 }

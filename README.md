@@ -36,7 +36,7 @@ Ejercicio de JavaScript, React (biblioteca de JS para construir interfaces de us
 
 ## Instalar todo lo necesario para disfrutar del proyecto:
 
-1. **Descarga** el [respositorio](https://github.com/Adalab/modulo-3-evaluacion-final-2y2son4.git) del repositorio de GitHub.
+1. **Descarga** el [respositorio](https://github.com/Adalab/modulo-3-evaluacion-final-2y2son4.git) de GitHub.
 2. **Abre una terminal** en la carpeta raíz del ejercicio.
 3. **Instala las dependencias** locales ejecutando en la terminal el comando:
 

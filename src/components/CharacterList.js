@@ -7,7 +7,7 @@ const CharacterList = (props) => {
     // console.log(character);
     const { id } = character;
     return (
-      <li className="list__item card" key={id}>
+      <li className="list__item" key={id}>
         <CharacterCard character={character} />
       </li>
     );
