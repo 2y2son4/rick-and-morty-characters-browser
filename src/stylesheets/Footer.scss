@@ -1,6 +1,6 @@
-@import 'Functions';
-@import 'Variables';
-@import 'Mixins';
+@import './core/Functions.scss';
+@import './core/Variables.scss';
+@import './core/Mixins.scss';
 
 .footer {
   width: 100%;
