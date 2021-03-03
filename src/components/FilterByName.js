@@ -9,16 +9,10 @@ const FilterByName = (props) => {
   };
   return (
     <div className="filter__list">
-      <label className="filter__list--label" htmlFor="character">
+      <label className="filter__list--label" htmlFor="name">
         Name:
       </label>
-      <input
-        className="filter__list--input"
-        type="text"
-        name="character"
-        id="characterSearch"
-        onChange={handleChange}
-      />
+      <input className="filter__list--input" type="text" name="name" id="characterSearch" onChange={handleChange} />
     </div>
   );
 };
