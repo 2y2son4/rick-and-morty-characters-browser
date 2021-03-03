@@ -17,7 +17,7 @@ function App() {
   console.log(characters);
   return (
     <div className="App App-header">
-      <Header></Header>
+      <Header />
       <Filters />
       <CharacterList characters={characters} />
       <Footer />
