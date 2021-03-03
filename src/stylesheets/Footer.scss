@@ -1,0 +1,35 @@
+@import 'Functions';
+@import 'Variables';
+@import 'Mixins';
+
+.footer {
+  width: 100%;
+  height: rem(50);
+  padding: rem(5);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  &__span {
+    color: $color-text;
+    &--link {
+      color: $color-text;
+      &:hover {
+        color: $color-brand;
+      }
+    }
+  }
+}
+
+.fly-in-bottom {
+  animation: flyinBottom 1.2s ease-in;
+}
+@keyframes flyinBottom {
+  0% {
+    transform: translatey(rem(1000));
+    opacity: 0;
+  }
+  100% {
+    transform: translatey(0);
+    opacity: 1;
+  }
+}
