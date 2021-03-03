@@ -3,16 +3,13 @@ import React from 'react';
 import '../stylesheets/CharacterCard.scss';
 
 const CharacterCard = (props) => {
-  const { name, image, gender, status, origin, location } = props.character;
+  const { name, image, species } = props.character;
   return (
     <>
       {/* <Link to={`/user${props.character.id}`} /> */}
-      <img className="card__img" src={image} alt="User" />
+      <img className="card__img" src={image} alt={name} />
       <h4 className="card__name">{name}</h4>
-      <p className="card__text--status">{status}</p>
-      <p className="card__text--gender">{gender}</p>
-      <p className="card__text--origin">Origin: {origin}</p>
-      <p className="card__text--location">Location: {location}</p>
+      <p className="card__text--species">{species}</p>
     </>
   );
 };
