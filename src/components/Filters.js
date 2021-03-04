@@ -1,12 +1,14 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import FilterByName from './FilterByName';
 import '../stylesheets/Filters.scss';
 
 const Filters = (props) => {
-  //   const {  } = props;
+  // prevent submit form
   const handleForm = (ev) => {
     ev.preventDefault();
   };
+
   const { handleFilter } = props;
 
   return (
@@ -17,6 +19,10 @@ const Filters = (props) => {
       </form>
     </section>
   );
+};
+
+Filters.propTypes = {
+  handleFilter: PropTypes.func.isRequired,
 };
 
 export default Filters;

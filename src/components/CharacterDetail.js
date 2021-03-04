@@ -1,10 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import '../stylesheets/CharacterDetail.scss';
 
 const CharacterDetail = (props) => {
   console.log(props);
   const { name, image, gender, status, origin, location, species, episodes } = props.character;
+  console.log(props.character);
 
   return (
     <div>
@@ -39,6 +41,18 @@ const CharacterDetail = (props) => {
       </div>
     </div>
   );
+};
+
+CharacterDetail.propTypes = {
+  name: PropTypes.string.isRequired,
+  image: PropTypes.string,
+  gender: PropTypes.string,
+  status: PropTypes.string,
+  origin: PropTypes.string,
+  location: PropTypes.string,
+  species: PropTypes.string,
+  episodes: PropTypes.number,
+  id: PropTypes.number,
 };
 
 export default CharacterDetail;

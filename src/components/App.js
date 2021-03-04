@@ -1,13 +1,17 @@
+// React
 import React, { useEffect, useState } from 'react';
-import '.././stylesheets/App.scss';
 import { Route, Switch } from 'react-router-dom';
+// services
 import Api from '../services/api';
+// components
 import Header from './Header';
 import Footer from './Footer';
 import Filters from './Filters';
 import CharacterList from './CharacterList';
 import CharacterDetail from './CharacterDetail';
 import CharacterNotAvailable from './CharacterNotAvailable';
+// styles
+import '.././stylesheets/App.scss';
 
 function App() {
   // hooks
@@ -43,7 +47,7 @@ function App() {
       console.log(typeof id);
       return character.id === id;
     });
-    if (selectedCharacter !== undefined) {
+    if (selectedCharacter) {
       console.log(selectedCharacter);
       return <CharacterDetail character={selectedCharacter} />;
     } else {
