@@ -10,11 +10,11 @@
   justify-content: center;
   align-items: flex-end;
   &__span {
-    color: $color-text;
+    color: $c7;
     &--link {
-      color: $color-text;
+      color: $c7;
       &:hover {
-        color: $color-brand;
+        color: $starship;
       }
     }
   }

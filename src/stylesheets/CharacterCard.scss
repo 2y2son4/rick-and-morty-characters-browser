@@ -10,19 +10,18 @@
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 4fr 1fr;
   border-radius: rem(20);
-  border: white solid rem(10);
-  color: #163f4b;
+  border: $c8 solid rem(5);
+  color: $cork;
   text-align: center;
-  background-color: #9dd4e4;
+  background-color: $c5;
   transition: transform 0.5s linear, background-color 0.5s linear, color 0.5s linear;
   &:hover {
     transform: scale(1.05);
-    background-color: #61dafb;
-    color: #282c34;
+    background-color: $c3;
   }
   &__img {
     width: rem(130);
-    border-radius: 30%;
+    border-radius: rem(25);
     grid-row: 2/3;
     margin: auto;
   }
@@ -30,6 +29,7 @@
     font-size: rem(20);
     padding: rem(10);
     grid-row: 1/2;
+    border-bottom: $cork rem(2) solid;
   }
   &__text {
     &--species {

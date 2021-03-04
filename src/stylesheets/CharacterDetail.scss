@@ -2,77 +2,81 @@
 @import './core/Variables.scss';
 @import './core/Mixins.scss';
 
-.modal {
-  &__bg {
-    position: fixed;
-    z-index: 998;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #30475e63;
-  }
-}
-
 .detail {
   margin: rem(10);
   padding: rem(10);
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 2fr;
   grid-template-rows: rem(36) rem(36) rem(36) rem(36) rem(36) rem(36);
   border-radius: rem(20);
-  border: white solid rem(10);
-  color: #163f4b;
+  border: $kobi solid rem(5);
+  color: $cork;
   text-align: left;
-  background-color: #9dd4e4;
+  background-color: $tonyspink;
   transition: transform 0.5s linear, background-color 0.5s linear, color 0.5s linear;
-  &:hover {
-    transform: scale(1.05);
-    background-color: #61dafb;
-    color: #282c34;
+  &__bold {
+    font-weight: bold;
+  }
+  &__lower {
+    text-transform: lowercase;
   }
   &__img {
     width: rem(130);
     border-radius: 30%;
     grid-column: 1 / 2;
-    grid-row: 1/5;
+    grid-row: 2/6;
   }
   &__name {
     font-size: rem(20);
-    padding-top: rem(10);
     grid-column: 1/3;
-    grid-row: 6/7;
+    grid-row: 1/2;
+    text-align: center;
   }
   &__text {
-    &--gender {
-      grid-column: 2/3;
-      grid-row: 1/2;
-    }
-    &--status {
+    &--species {
       grid-column: 2/3;
       grid-row: 2/3;
     }
-    &--location {
-      width: 150px;
+    &--status {
       grid-column: 2/3;
-      grid-row: 3/5;
+      grid-row: 3/4;
     }
     &--origin {
-      font-size: rem(14);
-      padding-top: rem(10);
-      width: rem(150);
+      grid-column: 2/3;
+      grid-row: 4/5;
+    }
+    &--location {
       grid-column: 2/3;
       grid-row: 5/6;
     }
+    &--episodes {
+      grid-column: 2/3;
+      grid-row: 6/7;
+    }
+
     &--status,
-    &--gender,
+    &--species,
+    &--origin,
     &--location,
-    &--origin {
+    &--episodes {
       font-size: rem(16);
       padding-left: rem(10);
+    }
+  }
+  &__close {
+    padding: 0 rem(5);
+    position: relative;
+    left: 50%;
+    width: rem(40);
+    height: rem(30);
+    background-color: $kobi;
+    border-radius: 50%;
+    border: $tonyspink solid rem(5);
+    font-size: rem(20);
+    font-weight: bold;
+    color: $cork;
+    &:hover {
+      transform: scale(1.05);
     }
   }
 }

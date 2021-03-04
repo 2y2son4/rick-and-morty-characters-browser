@@ -4,15 +4,16 @@
 
 .App {
   text-align: center;
+  background: url('../images/bg/bg1.jpg') no-repeat center / cover fixed;
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: $c1;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: calc(rem(10) + 2vmin);
+  color: $c8;
 }

@@ -13,6 +13,7 @@ const Api = () => {
           origin: character.origin.name,
           location: character.location.name,
           image: character.image,
+          episodes: character.episode.length,
         };
       });
     });

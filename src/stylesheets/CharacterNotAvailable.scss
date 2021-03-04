@@ -1,0 +1,17 @@
+@import './core/Functions.scss';
+@import './core/Variables.scss';
+@import './core/Mixins.scss';
+
+.notAvailable {
+  margin: rem(10);
+  padding: rem(10);
+  border-radius: rem(20);
+  border: $c8 solid rem(5);
+  color: $cork;
+  text-align: left;
+  background-color: $c5;
+  transition: transform 0.5s linear, background-color 0.5s linear, color 0.5s linear;
+  &__img {
+    border-radius: rem(20);
+  }
+}

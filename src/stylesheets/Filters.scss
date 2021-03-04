@@ -3,11 +3,13 @@
 @import './core/Mixins.scss';
 
 .filter {
-  margin: 20px auto;
-  padding: 10px;
-  border-radius: 20px;
-  border: white solid 5px;
-  color: white;
+  width: rem(500);
+  margin: rem(20) auto;
+  background-color: $c2;
+  padding: rem(10);
+  border-radius: rem(20);
+  border: $c8 solid rem(5);
+  color: $c8;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -15,39 +17,38 @@
   width: min-content;
   height: max-content;
   &__title {
-    font-size: 20px;
-    margin: 5px;
+    font-size: rem(20);
+    margin: rem(5);
   }
   &__list {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    // align-items: center;
-    margin: 5px;
+    margin: rem(5);
     &--input {
-      width: 150px;
-      height: 40px;
-      border-radius: 10px;
-      margin: 5px;
+      width: rem(150);
+      height: rem(40);
+      border-radius: rem(10);
+      margin: rem(5);
       border: none;
       cursor: pointer;
       &:hover {
-        background-color: #9dd4e4;
+        background-color: $c5;
       }
     }
     &--label {
       text-align: left;
       font-size: 18px;
-      margin: 5px;
+      margin: rem(5);
     }
     &--item {
       cursor: pointer;
-      border-radius: 10px;
+      border-radius: rem(10);
       border: none;
       width: 150px;
       height: 40px;
       &:hover {
-        background-color: #9dd4e4;
+        background-color: $c5;
       }
     }
     &--cities {

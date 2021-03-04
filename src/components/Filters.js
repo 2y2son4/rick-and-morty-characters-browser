@@ -11,8 +11,8 @@ const Filters = (props) => {
 
   return (
     <section className="filter">
-      <h2 className="filter__title">- Search -</h2>
-      <form className="filter__list" onChange={handleForm}>
+      <h2 className="filter__title">Show me what you got</h2>
+      <form className="filter__list" onSubmit={handleForm}>
         <FilterByName handleFilter={handleFilter} />
       </form>
     </section>
