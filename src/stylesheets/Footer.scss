@@ -3,6 +3,7 @@
 @import './core/Mixins.scss';
 
 .footer {
+  font-size: rem(24);
   width: 100%;
   height: rem(50);
   padding: rem(5);
@@ -10,11 +11,14 @@
   justify-content: center;
   align-items: flex-end;
   &__span {
-    color: $c7;
+    font-size: rem(18);
+    font-weight: 600;
+    color: $cork;
     &--link {
-      color: $c7;
+      color: $cork;
       &:hover {
-        color: $starship;
+        color: $c1;
+        border-bottom: $c1 rem(2) solid;
       }
     }
   }

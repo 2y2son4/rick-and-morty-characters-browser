@@ -72,10 +72,10 @@ function App() {
         <Route exact path="/">
           <Filters name={name} handleFilter={handleFilter} />
           <CharacterList characters={filterCharacters} />
-          <Footer />
         </Route>
         <Route path="/character/:id" render={renderDetail} />
       </Switch>
+      <Footer />
     </div>
   );
 }
