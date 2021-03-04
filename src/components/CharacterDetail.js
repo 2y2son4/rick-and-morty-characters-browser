@@ -4,9 +4,7 @@ import PropTypes from 'prop-types';
 import '../stylesheets/CharacterDetail.scss';
 
 const CharacterDetail = (props) => {
-  console.log(props);
   const { name, image, gender, status, origin, location, species, episodes } = props.character;
-  console.log(props.character);
 
   return (
     <div>
@@ -44,7 +42,7 @@ const CharacterDetail = (props) => {
 };
 
 CharacterDetail.propTypes = {
-  name: PropTypes.string.isRequired,
+  name: PropTypes.string,
   image: PropTypes.string,
   gender: PropTypes.string,
   status: PropTypes.string,

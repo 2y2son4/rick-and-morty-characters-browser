@@ -21,6 +21,7 @@ function App() {
   // hooks
   const [characters, setCharacters] = useState([]);
   const [name, setName] = useState(localStorage.get('name', ''));
+  const [species, setSpecies] = useState('');
 
   // call to API
   useEffect(() => {
@@ -33,32 +34,33 @@ function App() {
 
   // handler function for search
   const handleFilter = (input) => {
-    console.log(input.value, input.key);
-
     if (input.key === 'name') {
       // localStorage.get(input.key, input.value);
       setName(input.value);
+    } else if (input.key === 'species') {
+      setSpecies(input.value);
     }
   };
 
   // filtered array
-  const filterCharacters = characters.filter((character) => {
-    return character.name.toLowerCase().includes(name.toLowerCase());
-  });
+  const filterCharacters = characters
+    .filter((character) => {
+      return character.name.toLowerCase().includes(name.toLowerCase());
+    })
+    .filter((character) => {
+      return character.species.toLowerCase().includes(species);
+    });
   // ordenamos con .sort()
-  // console.log(filterCharacters);
 
-  // function to render character detailed card
+  // function to render character detailed card and url id
   const renderDetail = (props) => {
-    console.log(props.match.params);
+    // parse id to be strictly equal to character.id
     const id = parseInt(props.match.params.id);
 
     const selectedCharacter = characters.find((character) => {
-      console.log(typeof id);
       return character.id === id;
     });
     if (selectedCharacter) {
-      console.log(selectedCharacter);
       return <CharacterDetail character={selectedCharacter} />;
     } else {
       return <CharacterNotAvailable />;
