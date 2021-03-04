@@ -77,9 +77,7 @@
     }
   }
   &__span {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexCenter;
     width: rem(40);
     height: rem(40);
     background-color: $kobi;

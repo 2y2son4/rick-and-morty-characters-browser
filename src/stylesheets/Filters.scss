@@ -13,10 +13,9 @@
   border-radius: rem(20);
   border: $c8 solid rem(5);
   color: $c8;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include flexCenter {
+    flex-direction: column;
+  }
   width: min-content;
   height: max-content;
   &__title {
@@ -25,10 +24,9 @@
     border-bottom: $c8 rem(2) solid;
   }
   &__list {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+    @include flexCenter {
+      flex-direction: column;
+    }
     margin: rem(5);
     &--input {
       cursor: pointer;

@@ -7,9 +7,7 @@
   width: 100%;
   height: rem(50);
   padding: rem(5);
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
+  @include flexCenter;
   &__span {
     font-size: rem(18);
     font-weight: 600;

@@ -4,10 +4,15 @@
 
 .list {
   padding-left: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(6, minmax(rem(50), 100));
+  grid-gap: rem(10);
   font-size: rem(18);
+  @include tablet {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, minmax(rem(50), 100));
+  }
   &__item {
     font-size: rem(14);
   }

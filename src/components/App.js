@@ -51,7 +51,6 @@ function App() {
   const filterCharacters = characters
     // by name
     .filter((character) => {
-      console.log(character);
       return character.name.toLowerCase().includes(name.toLowerCase());
     })
     // by species

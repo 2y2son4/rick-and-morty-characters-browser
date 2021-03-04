@@ -8,7 +8,7 @@
   padding: rem(10);
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 4fr 1fr;
+  grid-template-rows: 1fr rem(150) 0.5fr;
   border-radius: rem(20);
   border: $c8 solid rem(5);
   color: $cork;

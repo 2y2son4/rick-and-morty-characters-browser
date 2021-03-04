@@ -10,10 +10,8 @@
 .App-header {
   background-color: $c1;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(rem(10) + 2vmin);
+  @include flexCenter {
+    flex-direction: column;
+  }
   color: $c8;
 }
