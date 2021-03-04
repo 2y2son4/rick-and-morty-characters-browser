@@ -4,6 +4,7 @@ import FilterByName from './FilterByName';
 import '../../stylesheets/Filters.scss';
 import FilterBySpecies from './FilterBySpecies';
 // import FilterByGender from './FilterByGender';
+import FilterByStatus from './FilterByStatus';
 
 const Filters = (props) => {
   // prevent submit form
@@ -20,6 +21,7 @@ const Filters = (props) => {
         <FilterByName name={name} handleFilter={handleFilter} />
         <FilterBySpecies handleFilter={handleFilter} />
         {/* <FilterByGender handleFilter={handleFilter} /> */}
+        <FilterByStatus handleFilter={handleFilter} />
       </form>
     </section>
   );

@@ -12,9 +12,9 @@ const CharacterCard = (props) => {
 
   const iconStatus = () => {
     if (status === 'Alive') {
-      return <i className="fas fa-user"></i>;
+      return <i className="far fa-meh-rolling-eyes"></i>;
     } else if (status === 'Dead') {
-      return <i className="fas fa-dizzy"></i>;
+      return <i className="far fa-dizzy"></i>;
     } else {
       return <i className="fas fa-question"></i>;
     }

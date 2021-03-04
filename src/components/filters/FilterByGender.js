@@ -9,8 +9,6 @@ const FilterByGender = (props) => {
       key: 'gender',
       value: ev.target.value,
     });
-    console.log();
-    // debugger;
   };
   return (
     <div className="filter__list">
@@ -27,7 +25,7 @@ const FilterByGender = (props) => {
 };
 
 FilterByGender.propTypes = {
-  handleFilter: PropTypes.func.isRequired,
+  handleFilter: PropTypes.func,
 };
 
 export default FilterByGender;

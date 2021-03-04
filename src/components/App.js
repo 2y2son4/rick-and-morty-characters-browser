@@ -23,7 +23,7 @@ function App() {
   const [name, setName] = useState(localStorage.get('name', ''));
   const [species, setSpecies] = useState('');
   // const [gender, setGender] = useState('');
-  const [status] = useState('');
+  const [status, setStatus] = useState('');
 
   // call to API
   useEffect(() => {
@@ -40,10 +40,11 @@ function App() {
       setName(input.value);
     } else if (input.key === 'species') {
       setSpecies(input.value);
+    } else if (input.key === 'status') {
+      setStatus(input.value);
+      // } else if (input.key === 'gender') {
+      //   setGender(input.value);
     }
-    // else if (input.key === 'gender') {
-    //   setGender(input.value);
-    // }
   };
 
   // filtered array
@@ -55,12 +56,11 @@ function App() {
       return character.species.toLowerCase().includes(species);
     })
     .filter((character) => {
-      return character.status.includes(status);
+      return character.status.toLowerCase().includes(status);
     });
   // .filter((character) => {
   //   return character.gender.toLowerCase().includes(gender);
   // })
-  // debugger;
   // ordenamos con .sort()
 
   // function to render character detailed card and url id
