@@ -49,19 +49,34 @@ function App() {
 
   // filtered array
   const filterCharacters = characters
+    // by name
     .filter((character) => {
+      console.log(character);
       return character.name.toLowerCase().includes(name.toLowerCase());
     })
+    // by species
     .filter((character) => {
       return character.species.toLowerCase().includes(species);
     })
+    // by status
     .filter((character) => {
       return character.status.toLowerCase().includes(status);
+    })
+    // order by name
+    .sort((a, b) => {
+      let characterA = a.name.toUpperCase();
+      let characterB = b.name.toUpperCase();
+      if (characterA < characterB) {
+        return -1;
+      }
+      if (characterA > characterB) {
+        return 1;
+      }
+      return 0;
     });
   // .filter((character) => {
   //   return character.gender.toLowerCase().includes(gender);
   // })
-  // ordenamos con .sort()
 
   // function to render character detailed card and url id
   const renderDetail = (props) => {
