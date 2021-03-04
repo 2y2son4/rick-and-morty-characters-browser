@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const FilterByName = (props) => {
-  const { handleFilter } = props;
+  const { name, handleFilter } = props;
 
   const handleChange = (ev) => {
     handleFilter({
@@ -15,12 +15,20 @@ const FilterByName = (props) => {
       <label className="filter__list--label" htmlFor="name">
         Name:
       </label>
-      <input className="filter__list--input" type="text" name="name" id="characterSearch" onChange={handleChange} />
+      <input
+        className="filter__list--input"
+        type="text"
+        name="name"
+        value={name}
+        id="characterSearch"
+        onChange={handleChange}
+      />
     </div>
   );
 };
 
 FilterByName.propTypes = {
+  name: PropTypes.string,
   handleFilter: PropTypes.func.isRequired,
 };
 

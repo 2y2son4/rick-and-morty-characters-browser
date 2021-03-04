@@ -9,19 +9,20 @@ const Filters = (props) => {
     ev.preventDefault();
   };
 
-  const { handleFilter } = props;
+  const { name, handleFilter } = props;
 
   return (
     <section className="filter">
       <h2 className="filter__title">Show me what you got</h2>
       <form className="filter__list" onSubmit={handleForm}>
-        <FilterByName handleFilter={handleFilter} />
+        <FilterByName name={name} handleFilter={handleFilter} />
       </form>
     </section>
   );
 };
 
 Filters.propTypes = {
+  name: PropTypes.string,
   handleFilter: PropTypes.func.isRequired,
 };
 
