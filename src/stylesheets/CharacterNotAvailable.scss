@@ -6,12 +6,43 @@
   margin: rem(10);
   padding: rem(10);
   border-radius: rem(20);
-  border: $c8 solid rem(5);
+  border: $tonyspink solid rem(5);
   color: $cork;
+  background-color: $kobi;
   text-align: left;
-  background-color: $c5;
   transition: transform 0.5s linear, background-color 0.5s linear, color 0.5s linear;
   &__img {
     border-radius: rem(20);
+  }
+  &__span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: rem(40);
+    height: rem(40);
+    background-color: $kobi;
+    border-radius: 50%;
+    border: $kobi solid rem(5);
+    padding: 0 rem(5);
+    position: relative;
+    left: 97%;
+    transition: all linear 0.8s;
+    &:hover {
+      transform: scale(1.1);
+      color: $c4;
+      background-color: $c1;
+      border: $c1 solid rem(5);
+    }
+  }
+  &__close {
+    padding: rem(5);
+    font-size: rem(24);
+    font-weight: bold;
+    color: $cork;
+    transition: all linear 0.8s;
+    &:hover {
+      transform: scale(1.1);
+      color: $c4;
+    }
   }
 }

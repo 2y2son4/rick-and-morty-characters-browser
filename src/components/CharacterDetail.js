@@ -9,13 +9,17 @@ const CharacterDetail = (props) => {
   return (
     <div>
       <Link to="/">
-        <span className="detail__close">X</span>
+        <span className="detail__span">
+          <i className="fas fa-times detail__close"></i>
+        </span>
       </Link>
       <div className="detail">
         <h4 className="detail__name">
           {name} <span className="detail__lower">({gender})</span>
         </h4>
-        <img className="detail__img" src={image} alt={name} />
+        <span className="detail__img--parent">
+          <img className="detail__img--child" src={image} alt={'Ugly face of ' + name} />
+        </span>
         <span className="detail__icons"></span>
         <p className="detail__text--species">
           <span className="detail__bold">Species:</span> <span className="detail__lower">{species}</span>

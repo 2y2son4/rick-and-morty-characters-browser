@@ -7,7 +7,9 @@ const CharacterNotAvailable = (props) => {
   return (
     <div>
       <Link to="/">
-        <span className="detail__close">X</span>
+        <span className="detail__span">
+          <i className="fas fa-times detail__close"></i>
+        </span>
       </Link>
       <div className="notAvailable">
         <img className="notAvailable__img" src={imageNotAvailable} alt="Character not found. Aw geez" />
