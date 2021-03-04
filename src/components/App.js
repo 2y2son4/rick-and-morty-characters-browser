@@ -9,10 +9,10 @@ import localStorage from '.././services/localStorage';
 // components
 import Header from './Header';
 import Footer from './Footer';
-import Filters from './Filters';
-import CharacterList from './CharacterList';
-import CharacterDetail from './CharacterDetail';
-import CharacterNotAvailable from './CharacterNotAvailable';
+import Filters from './filters/Filters';
+import CharacterList from './generateCharacters/CharacterList';
+import CharacterDetail from './generateCharacters/CharacterDetail';
+import CharacterNotAvailable from './generateCharacters/CharacterNotAvailable';
 
 // styles
 import '.././stylesheets/App.scss';
@@ -22,6 +22,7 @@ function App() {
   const [characters, setCharacters] = useState([]);
   const [name, setName] = useState(localStorage.get('name', ''));
   const [species, setSpecies] = useState('');
+  const [gender, setGender] = useState('');
 
   // call to API
   useEffect(() => {
@@ -39,6 +40,8 @@ function App() {
       setName(input.value);
     } else if (input.key === 'species') {
       setSpecies(input.value);
+    } else if (input.key === 'gender') {
+      setGender(input.value);
     }
   };
 
@@ -48,8 +51,12 @@ function App() {
       return character.name.toLowerCase().includes(name.toLowerCase());
     })
     .filter((character) => {
+      return character.gender.toLowerCase().includes(gender);
+    })
+    .filter((character) => {
       return character.species.toLowerCase().includes(species);
     });
+  // debugger;
   // ordenamos con .sort()
 
   // function to render character detailed card and url id

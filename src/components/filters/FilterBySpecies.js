@@ -18,7 +18,7 @@ const FilterBySpecies = (props) => {
       <select className="filter__list--input" name="species" id="species" onChange={handleChange}>
         <option value="">All</option>
         <option value="alien">Alien 👽</option>
-        <option value="human">Human</option>
+        <option value="human">Human 👩</option>
       </select>
     </div>
   );

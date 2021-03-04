@@ -4,7 +4,9 @@
 
 Ejercicio de JavaScript, React (biblioteca de JS para construir interfaces de usuaria) HTML y CSS para realizar una página de búsqueda de personajes de la serie animada de TV _Rick & Morty_, a través de un API. Tras hacer la búsqueda, los personajes encontrados se muestran en tarjetas que podrán clickarse para obtener más información sobre el personaje.
 
-![Pickle Rick](./public/favicon.ico)
+## **Wubba Lubba Dub Dub!!**
+
+![Pickle Rick](./public/favicon.ico)
 
 ## PASOS:
 

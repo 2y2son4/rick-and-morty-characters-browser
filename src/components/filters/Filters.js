@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import FilterByName from './FilterByName';
-import '../stylesheets/Filters.scss';
+import '../../stylesheets/Filters.scss';
 import FilterBySpecies from './FilterBySpecies';
+// import FilterByGender from './FilterByGender';
 
 const Filters = (props) => {
   // prevent submit form
@@ -15,9 +16,10 @@ const Filters = (props) => {
   return (
     <section className="filter">
       <h2 className="filter__title">Show me what you got</h2>
-      <form className="filter__list" onSubmit={handleForm}>
+      <form className="filter__container" onSubmit={handleForm}>
         <FilterByName name={name} handleFilter={handleFilter} />
         <FilterBySpecies handleFilter={handleFilter} />
+        {/* <FilterByGender handleFilter={handleFilter} /> */}
       </form>
     </section>
   );
