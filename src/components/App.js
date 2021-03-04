@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import '.././stylesheets/App.scss';
-import PropTypes from 'prop-types';
 import { Route, Switch } from 'react-router-dom';
 import Api from '../services/api';
 import Header from './Header';
