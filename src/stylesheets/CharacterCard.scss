@@ -14,10 +14,11 @@
   color: $cork;
   text-align: center;
   background-color: $c5;
-  transition: transform 0.5s linear, background-color 0.5s linear, color 0.5s linear;
+  transition: all 0.5s linear;
   &:hover {
     transform: scale(1.05);
-    background-color: $c3;
+    border: $c8 solid rem(5);
+    background-color: $c2;
   }
   &__img {
     width: rem(130);

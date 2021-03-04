@@ -7,6 +7,7 @@ import api from '../services/api';
 import localStorage from '.././services/localStorage';
 
 // components
+
 import Header from './Header';
 import Footer from './Footer';
 import Filters from './filters/Filters';
@@ -33,6 +34,15 @@ function App() {
   useEffect(() => {
     localStorage.set('name', name);
   }, [name]);
+
+  // reset button
+  const resetSearch = () => {
+    setCharacters(characters);
+    setName('');
+    setSpecies('');
+    // setGender('');
+    setStatus('');
+  };
 
   // handler function for search
   const handleFilter = (input) => {
@@ -97,7 +107,7 @@ function App() {
       <Header />
       <Switch>
         <Route exact path="/">
-          <Filters name={name} handleFilter={handleFilter} />
+          <Filters name={name} status={status} species={species} handleFilter={handleFilter} resetBtn={resetSearch} />
           <CharacterList characters={filterCharacters} />
         </Route>
         <Route path="/character/:id" render={renderDetail} />

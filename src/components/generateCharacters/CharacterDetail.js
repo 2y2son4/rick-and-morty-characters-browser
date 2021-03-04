@@ -12,7 +12,7 @@ const CharacterDetail = (props) => {
 
   const iconStatus = () => {
     if (status === 'Alive') {
-      return <i className="far fa-meh-rolling-eyes"></i>;
+      return <i className="far fa-kiss"></i>;
     } else if (status === 'Dead') {
       return <i className="far fa-dizzy"></i>;
     } else {

@@ -3,21 +3,19 @@
 @import './core/Mixins.scss';
 
 .filter {
-  &__container {
-    display: flex;
-  }
-  width: rem(500);
-  margin: rem(20) auto;
   background-color: $c2;
+  margin: rem(10);
   padding: rem(10);
   border-radius: rem(20);
   border: $c8 solid rem(5);
   color: $c8;
+  height: max-content;
   @include flexCenter {
     flex-direction: column;
   }
-  width: min-content;
-  height: max-content;
+  &__container {
+    display: flex;
+  }
   &__title {
     font-size: rem(24);
     margin: rem(5);

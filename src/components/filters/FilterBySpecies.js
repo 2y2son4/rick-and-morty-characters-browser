@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const FilterBySpecies = (props) => {
-  const { handleFilter } = props;
+  const { species, handleFilter } = props;
 
   const handleChange = (ev) => {
     handleFilter({
@@ -15,7 +15,7 @@ const FilterBySpecies = (props) => {
       <label className="filter__list--label" htmlFor="species">
         Species:
       </label>
-      <select className="filter__list--input" name="species" id="species" onChange={handleChange}>
+      <select className="filter__list--input" name="species" id="species" value={species} onChange={handleChange}>
         <option value="">All</option>
         <option value="alien">Alien</option>
         <option value="human">Human</option>

@@ -5,6 +5,7 @@ import '../../stylesheets/Filters.scss';
 import FilterBySpecies from './FilterBySpecies';
 // import FilterByGender from './FilterByGender';
 import FilterByStatus from './FilterByStatus';
+import ResetBtn from '../extra/ResetBtn';
 
 const Filters = (props) => {
   // prevent submit form
@@ -12,16 +13,17 @@ const Filters = (props) => {
     ev.preventDefault();
   };
 
-  const { name, handleFilter } = props;
+  const { name, species, status, handleFilter, resetBtn } = props;
 
   return (
     <section className="filter">
       <h2 className="filter__title">Show me what you got</h2>
       <form className="filter__container" onSubmit={handleForm}>
         <FilterByName name={name} handleFilter={handleFilter} />
-        <FilterBySpecies handleFilter={handleFilter} />
+        <FilterBySpecies species={species} handleFilter={handleFilter} />
         {/* <FilterByGender handleFilter={handleFilter} /> */}
-        <FilterByStatus handleFilter={handleFilter} />
+        <FilterByStatus status={status} handleFilter={handleFilter} />
+        <ResetBtn resetBtn={resetBtn} />
       </form>
     </section>
   );
