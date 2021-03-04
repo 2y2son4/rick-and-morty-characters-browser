@@ -6,11 +6,25 @@ import '../../stylesheets/CharacterDetail.scss';
 const CharacterDetail = (props) => {
   const { name, image, gender, status, origin, location, species, episodes } = props.character;
 
+  const iconSpecies = () => {
+    return species === 'Alien' ? <i className="fas fa-pastafarianism"></i> : <i className="fas fa-user"></i>;
+  };
+
+  const iconStatus = () => {
+    if (status === 'Alive') {
+      return <i className="fas fa-user"></i>;
+    } else if (status === 'Dead') {
+      return <i className="fas fa-dizzy"></i>;
+    } else {
+      return <i className="fas fa-question"></i>;
+    }
+  };
+
   return (
     <div>
       <Link to="/">
         <span className="detail__span">
-          <i className="fas fa-times detail__close"></i>
+          <i className="fas fa-times"></i>
         </span>
       </Link>
       <div className="detail">
@@ -20,12 +34,17 @@ const CharacterDetail = (props) => {
         <span className="detail__img--parent">
           <img className="detail__img--child" src={image} alt={'Ugly face of ' + name} />
         </span>
-        <span className="detail__icons"></span>
         <p className="detail__text--species">
-          <span className="detail__bold">Species:</span> <span className="detail__lower">{species}</span>
+          <span className="detail__bold">Species:</span>{' '}
+          <span className="detail__lower">
+            {species} {iconSpecies()}
+          </span>
         </p>
         <p className="detail__text--status">
-          <span className="detail__bold">Status:</span> <span className="detail__lower">{status}</span>
+          <span className="detail__bold">Status:</span>{' '}
+          <span className="detail__lower">
+            {status} {iconStatus()}
+          </span>
         </p>
         <p className="detail__text--origin">
           <span className="detail__bold">Origin:</span> {origin}

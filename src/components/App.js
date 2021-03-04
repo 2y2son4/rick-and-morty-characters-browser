@@ -22,7 +22,8 @@ function App() {
   const [characters, setCharacters] = useState([]);
   const [name, setName] = useState(localStorage.get('name', ''));
   const [species, setSpecies] = useState('');
-  const [gender, setGender] = useState('');
+  // const [gender, setGender] = useState('');
+  const [status] = useState('');
 
   // call to API
   useEffect(() => {
@@ -36,13 +37,13 @@ function App() {
   // handler function for search
   const handleFilter = (input) => {
     if (input.key === 'name') {
-      // localStorage.get(input.key, input.value);
       setName(input.value);
     } else if (input.key === 'species') {
       setSpecies(input.value);
-    } else if (input.key === 'gender') {
-      setGender(input.value);
     }
+    // else if (input.key === 'gender') {
+    //   setGender(input.value);
+    // }
   };
 
   // filtered array
@@ -51,11 +52,14 @@ function App() {
       return character.name.toLowerCase().includes(name.toLowerCase());
     })
     .filter((character) => {
-      return character.gender.toLowerCase().includes(gender);
+      return character.species.toLowerCase().includes(species);
     })
     .filter((character) => {
-      return character.species.toLowerCase().includes(species);
+      return character.status.includes(status);
     });
+  // .filter((character) => {
+  //   return character.gender.toLowerCase().includes(gender);
+  // })
   // debugger;
   // ordenamos con .sort()
 

@@ -8,7 +8,7 @@ const CharacterNotAvailable = () => {
     <div>
       <Link to="/">
         <span className="detail__span">
-          <i className="fas fa-times detail__close"></i>
+          <i className="fas fa-times"></i>
         </span>
       </Link>
       <div className="notAvailable">

@@ -9,8 +9,8 @@
   grid-template-columns: 1fr 2fr;
   grid-template-rows: repeat(6, rem(36));
   border-radius: rem(20);
-  border: $tonyspink solid rem(5);
-  color: $cork;
+  border: $c1 solid rem(5);
+  color: $c1;
   background-color: $kobi;
   text-align: left;
   transition: transform 0.5s linear, background-color 0.5s linear, color 0.5s linear;
@@ -30,7 +30,6 @@
     &--child {
       width: rem(130);
       border-radius: 30%;
-
       background: fixed;
       &:hover {
         transform: scale(1.1);
@@ -43,7 +42,7 @@
     grid-row: 1/2;
     text-align: left;
     padding: rem(5) rem(10);
-    border-bottom: $cork rem(2) solid;
+    border-bottom: $c1 rem(2) solid;
   }
   &__text {
     &--species {
@@ -85,7 +84,7 @@
     height: rem(40);
     background-color: $kobi;
     border-radius: 50%;
-    border: $kobi solid rem(5);
+    border: $c1 solid rem(5);
     padding: 0 rem(5);
     position: relative;
     left: 97%;
@@ -94,14 +93,14 @@
       transform: scale(1.1);
       color: $c4;
       background-color: $c1;
-      border: $c1 solid rem(5);
+      border: $c4 solid rem(5);
     }
   }
   &__close {
     padding: rem(5);
-    font-size: rem(24);
+    font-size: rem(42);
     font-weight: bold;
-    color: $cork;
+    color: $c1;
     transition: all linear 0.8s;
     &:hover {
       transform: scale(1.1);
