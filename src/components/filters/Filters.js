@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import FilterByName from './FilterByName';
 import '../../stylesheets/Filters.scss';
 import FilterBySpecies from './FilterBySpecies';
-// import FilterByGender from './FilterByGender';
+import FilterByGender from './FilterByGender';
 import FilterByStatus from './FilterByStatus';
 import ResetBtn from '../reset/ResetBtn';
 
@@ -13,7 +13,7 @@ const Filters = (props) => {
     ev.preventDefault();
   };
 
-  const { name, species, status, handleFilter, resetBtn } = props;
+  const { name, species, status, gender, handleFilter, resetBtn } = props;
 
   return (
     <section className="filter">
@@ -22,7 +22,7 @@ const Filters = (props) => {
         <FilterByName name={name} handleFilter={handleFilter} />
         <FilterBySpecies species={species} handleFilter={handleFilter} />
         <FilterByStatus status={status} handleFilter={handleFilter} />
-        {/* <FilterByGender gender={gender} handleFilter={handleFilter} /> */}
+        <FilterByGender gender={gender} handleFilter={handleFilter} />
         <ResetBtn resetBtn={resetBtn} />
       </form>
     </section>

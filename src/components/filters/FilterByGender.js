@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const FilterByGender = (props) => {
-  const { handleFilter } = props;
+  const { gender, handleFilter } = props;
 
   const handleChange = (ev) => {
     handleFilter({
@@ -16,11 +16,11 @@ const FilterByGender = (props) => {
       <label htmlFor="gender" className="filter__list--label">
         Gender:
       </label>
-      <select className="filter__list--input" name="gender" id="gender" onChange={handleChange}>
+      <select className="filter__list--input" name="gender" id="gender" value={gender} onChange={handleChange}>
         <option value="">All</option>
-        <option value="Female">Female</option>
-        <option value="Male">Male</option>
-        <option value="Unknown">Unknown</option>
+        <option value="female">Female</option>
+        <option value="male">Male</option>
+        <option value="unknown">Unknown</option>
       </select>
     </fieldset>
   );

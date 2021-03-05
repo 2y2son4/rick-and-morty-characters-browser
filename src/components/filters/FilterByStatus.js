@@ -16,18 +16,10 @@ const FilterByStatus = (props) => {
         Status:
       </label>
       <select className="filter__list--input" name="status" id="status" value={status} onChange={handleChange}>
-        <option className="filter__list--option" value="">
-          All
-        </option>
-        <option className="filter__list--option" value="alive">
-          Alive
-        </option>
-        <option className="filter__list--option" value="dead">
-          Dead
-        </option>
-        <option className="filter__list--option" value="unknown">
-          Unknown
-        </option>
+        <option value="">All</option>
+        <option value="alive">Alive</option>
+        <option value="dead">Dead</option>
+        <option value="unknown">Unknown</option>
       </select>
     </fieldset>
   );
