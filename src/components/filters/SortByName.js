@@ -24,7 +24,7 @@ const SortByName = (props) => {
           checked={sortDirection === 'AtoZ'}
           onChange={handleSortDirection}
         />{' '}
-        A to Z:
+        <i className="fas fa-sort-alpha-down filter__list--radio-icon"></i>
       </label>
       <label className="filter__list--label-radio" htmlFor="Zto">
         <input
@@ -36,7 +36,7 @@ const SortByName = (props) => {
           checked={sortDirection === 'ZtoA'}
           onChange={handleSortDirection}
         />{' '}
-        Z to A:
+        <i className="fas fa-sort-alpha-down-alt filter__list--radio-icon"></i>
       </label>
     </fieldset>
   );

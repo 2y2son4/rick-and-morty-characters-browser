@@ -1,15 +1,18 @@
 import React from 'react';
 
-import '../.././stylesheets/CharacterNotFound.scss';
+import ResetBtn from '../reset/ResetBtn';
+
+import '../.././stylesheets/generateCharacters/CharacterNotFound.scss';
 
 import terry from '../.././images/gifs/terry.gif';
-// import portal from '../.././images/gifs/portal.gif';
 
-const Character = () => {
+const Character = (props) => {
+  const { resetBtn } = props;
   return (
     <div className="notFound">
       <p className="notFound__text">Your search returned no results, bitch!</p>
       <img className="notFound__img" src={terry} alt="Sorry, no results, bitch!" />
+      <ResetBtn resetBtn={resetBtn} classResetBtn={'reset__notFound'} classResetIcon={'reset__notFound--icon'} />
     </div>
   );
 };

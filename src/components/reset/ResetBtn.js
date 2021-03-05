@@ -1,15 +1,16 @@
 import React from 'react';
 // styles:
-import '../../stylesheets/ResetBtn.scss';
+import '../../stylesheets/reset/ResetBtn.scss';
 
 const ResetBtn = (props) => {
-  const resetBtn = () => {
-    props.resetBtn();
+  const { resetBtn, classResetBtn, classResetIcon } = props;
+  const reset = () => {
+    resetBtn();
   };
 
   return (
-    <button className="reset" onClick={resetBtn}>
-      <i className="fas fa-reply reset__icon"></i>
+    <button className={classResetBtn} onClick={reset}>
+      <i className={'fas fa-reply ' + classResetIcon}></i>
     </button>
   );
 };

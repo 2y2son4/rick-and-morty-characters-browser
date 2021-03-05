@@ -1,6 +1,6 @@
-@import './core/Functions.scss';
-@import './core/Variables.scss';
-@import './core/Mixins.scss';
+@import '.././core/Functions.scss';
+@import '.././core/Variables.scss';
+@import '.././core/Mixins.scss';
 
 .header {
   @include flexCenter {
@@ -11,11 +11,11 @@
     display: none;
   }
   &__img {
-    width: rem(300);
+    width: rem(350);
+    margin: rem(10);
     @include tablet {
       width: rem(450);
+      margin: rem(40);
     }
-
-    margin: rem(40);
   }
 }

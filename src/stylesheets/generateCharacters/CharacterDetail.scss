@@ -1,6 +1,6 @@
-@import './core/Functions.scss';
-@import './core/Variables.scss';
-@import './core/Mixins.scss';
+@import '.././core/Functions.scss';
+@import '.././core/Variables.scss';
+@import '.././core/Mixins.scss';
 
 .detail {
   width: rem(250);
@@ -59,13 +59,14 @@
     justify-content: center;
     align-content: center;
     font-size: rem(22);
-    text-align: left;
+    text-align: center;
     padding: rem(5) rem(10);
     @include tablet {
       border-bottom: $dark rem(2) solid;
       display: inline;
       grid-column: 2/3;
       grid-row: 1/2;
+      text-align: left;
     }
   }
   &__text {

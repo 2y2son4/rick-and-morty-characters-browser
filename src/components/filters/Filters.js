@@ -1,12 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import FilterByName from './FilterByName';
-import '../../stylesheets/Filters.scss';
 import FilterBySpecies from './FilterBySpecies';
 import FilterByGender from './FilterByGender';
 import FilterByStatus from './FilterByStatus';
 import ResetBtn from '../reset/ResetBtn';
+
 import SortByName from './SortByName';
+
+import '../../stylesheets/filters/Filters.scss';
 
 const Filters = (props) => {
   // prevent submit form
@@ -24,7 +27,7 @@ const Filters = (props) => {
         <FilterBySpecies species={species} handleFilter={handleFilter} />
         <FilterByStatus status={status} handleFilter={handleFilter} />
         <FilterByGender gender={gender} handleFilter={handleFilter} />
-        <ResetBtn resetBtn={resetBtn} />
+        <ResetBtn resetBtn={resetBtn} classResetBtn={'reset'} classResetIcon={'reset__icon'} />
         <SortByName sortDirection={sortDirection} handleFilter={handleFilter} />
       </form>
     </section>

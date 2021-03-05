@@ -1,27 +1,30 @@
-@import './core/Functions.scss';
-@import './core/Variables.scss';
-@import './core/Mixins.scss';
+@import '.././core/Functions.scss';
+@import '.././core/Variables.scss';
+@import '.././core/Mixins.scss';
 
 .notFound {
   background-color: $pink1;
   border-radius: rem(10);
   border: $dark rem(5) solid;
-  width: rem(500);
-  height: rem(400);
-  @include flexCenter {
-    flex-direction: column;
+  width: rem(350);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  @include tablet {
+    width: rem(500);
+    justify-content: center;
   }
   &__text {
     color: $dark;
     font-weight: bold;
     font-size: rem(30);
     margin: rem(10);
-    padding: rem(10);
   }
   &__img {
     width: rem(250);
     background-color: $pink3;
     border-radius: rem(10);
-    margin-bottom: rem(20);
+    margin: rem(10);
   }
 }

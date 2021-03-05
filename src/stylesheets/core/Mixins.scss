@@ -8,12 +8,7 @@
 
 // mediaqueries
 @mixin tablet {
-  @media all and (min-width: 820px) {
-    @content;
-  }
-}
-@mixin desktop {
-  @media all and (min-width: 1200px) {
+  @media all and (min-width: 1024px) {
     @content;
   }
 }

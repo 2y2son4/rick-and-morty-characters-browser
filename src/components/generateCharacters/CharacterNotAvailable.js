@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../../stylesheets/CharacterNotAvailable.scss';
+
+import '../../stylesheets/generateCharacters/CharacterNotAvailable.scss';
+
 import imageNotAvailable from '../../images/cards/404-card-desktop.png';
 
 const CharacterNotAvailable = () => {

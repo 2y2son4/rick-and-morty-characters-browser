@@ -1,0 +1,9 @@
+@import '.././core/Functions.scss';
+@import '.././core/Mixins.scss';
+
+.list {
+  max-width: rem(1100);
+  @include flexCenter {
+    flex-wrap: wrap;
+  }
+}

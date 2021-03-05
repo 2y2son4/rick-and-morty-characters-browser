@@ -1,6 +1,6 @@
-@import './core/Functions.scss';
-@import './core/Variables.scss';
-@import './core/Mixins.scss';
+@import '.././core/Functions.scss';
+@import '.././core/Variables.scss';
+@import '.././core/Mixins.scss';
 
 .filter {
   background-color: $green1;
@@ -48,12 +48,8 @@
       transition: $trans-ease;
       &:hover {
         background-color: $blue2;
-        &::placeholder {
-          color: transparent;
-        }
       }
       &::placeholder {
-        color: $blue2;
         transition: $trans-ease;
       }
       &:focus::placeholder {
@@ -81,6 +77,14 @@
     &--cities {
       display: flex;
       flex-direction: column;
+    }
+    &--radio {
+      padding: rem(20);
+      cursor: pointer;
+      &-icon {
+        font-size: rem(20);
+        padding: rem(5);
+      }
     }
   }
 }

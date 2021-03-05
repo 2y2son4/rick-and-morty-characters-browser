@@ -1,11 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import CharacterCard from './CharacterCard';
-import '../../stylesheets/CharacterList.scss';
-import NotFound from './CharacterNotFound';
+
+import '../../stylesheets/generateCharacters/CharacterList.scss';
+
+import CharacterNotFound from './CharacterNotFound';
 
 const CharacterList = (props) => {
-  const characterElement = props.characters.map((character) => {
+  const { characters, resetBtn } = props;
+  const characterElement = characters.map((character) => {
     const { id } = character;
 
     return (
@@ -21,7 +24,7 @@ const CharacterList = (props) => {
       </article>
     );
   } else {
-    return <NotFound />;
+    return <CharacterNotFound resetBtn={resetBtn} />;
   }
 };
 

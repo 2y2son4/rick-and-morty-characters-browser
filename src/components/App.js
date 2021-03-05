@@ -9,8 +9,8 @@ import sortFunc from '.././services/sortFunctions';
 
 // components
 
-import Header from './Header';
-import Footer from './Footer';
+import Header from './layout/Header';
+import Footer from './layout/Footer';
 import Filters from './filters/Filters';
 import CharacterList from './generateCharacters/CharacterList';
 import CharacterDetail from './generateCharacters/CharacterDetail';
@@ -24,7 +24,6 @@ function App() {
   const [characters, setCharacters] = useState([]);
   const [filteredCharacters, setFilteredCharacters] = useState([]);
   const [sortDirection, setSortDirection] = useState('AtoZ');
-  // const [sortAZ, setSortAZ] = useState(true);
   const [name, setName] = useState(localStorage.get('name', ''));
   const [species, setSpecies] = useState('');
   const [status, setStatus] = useState('');
@@ -117,7 +116,7 @@ function App() {
             handleFilter={handleFilter}
             resetBtn={resetSearch}
           />
-          <CharacterList characters={filteredCharacters} />
+          <CharacterList characters={filteredCharacters} resetBtn={resetSearch} />
         </Route>
         <Route path="/character/:id" render={renderDetail} />
       </Switch>

@@ -1,12 +1,11 @@
-@import './core/Functions.scss';
-@import './core/Variables.scss';
-@import './core/Mixins.scss';
+@import '.././core/Functions.scss';
+@import '.././core/Variables.scss';
+@import '.././core/Mixins.scss';
 
 .footer {
   width: 100%;
   height: rem(50);
   padding: rem(5);
-  @include flexCenter;
   &__span {
     font-size: rem(22);
     font-weight: 600;
