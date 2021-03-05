@@ -1,4 +1,4 @@
-# ![2y2son4](./public/favicon2.ico) **Módulo 3 - Evaluación final - React**
+# ![2y2son4](./src/images/favicon2.ico) **Módulo 3 - Evaluación final - React**
 
 ## **Descripción:**
 
@@ -10,16 +10,16 @@ Ejercicio de JavaScript, React (biblioteca de JS para construir interfaces de us
 
 ## PASOS:
 
-1. **Listado de personajes:** Listado en tarjetas de los 20 primeros personajes que devuelve la API, con la foto, nombre y especie.
-2. **Filtrado de personajes:** Existe la posibilidad de filtrar por nombre el personaje que se quiera encontrar.
-3. **Componentes de React:** La APP está dividida en diferentes componentes que permiten la reutilización de código y funcionalidades:
+1. **LISTADO DE PERSONAJES:** Listado en tarjetas de los 20 primeros personajes que devuelve la API, con la foto, nombre y especie.
+2. **FILTRADO DE PERSONAJES:** Existe la posibilidad de filtrar por nombre el personaje que se quiera encontrar.
+3. **COMPONENTES DE REACT** La APP está dividida en diferentes componentes que permiten la reutilización de código y funcionalidades:
 
 - Filtros.
 - Listado.
 - Tarjeta de cada personaje.
 - Detalle de cada personaje.
 
-4. **Tarjeta de detalle de personaje:** Funcionalidad que permite, al hacer click sobre la tarjeta del personaje de la búsqueda, acceder a una tarjeta con más informaci´n sobre el personaje (planeta de origen, número de episodios en los que aparece y si está vivo o muerto).
+4. **TARJETA DE DETALLE DE PERSONAJE:** Funcionalidad que permite, al hacer click sobre la tarjeta del personaje de la búsqueda, acceder a una tarjeta con más informaci´n sobre el personaje (planeta de origen, número de episodios en los que aparece y si está vivo o muerto).
 
 5. **CALIDAD:**
 
@@ -38,7 +38,7 @@ Ejercicio de JavaScript, React (biblioteca de JS para construir interfaces de us
 
 ## Instalar todo lo necesario para disfrutar del proyecto:
 
-1. **Descarga** el [respositorio](https://github.com/Adalab/modulo-3-evaluacion-final-2y2son4.git) de GitHub.
+1. **Descarga** el [respositorio](https://github.com/Adalab/modulo-3-evaluacion-final-2y2son4.git) de GitHub y descomprime la carpeta.
 2. **Abre una terminal** en la carpeta raíz del ejercicio.
 3. **Instala las dependencias** locales ejecutando en la terminal el comando:
 
@@ -48,7 +48,7 @@ npm install
 
 ### Pasos para arrancar el proyecto:
 
-Una vez instaladas las dependencias, arranca el proyectoejecutando el comando:
+Una vez instaladas las dependencias, arranca el proyecto ejecutando el comando:
 
 ```bash
 npm start
