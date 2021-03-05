@@ -3,7 +3,7 @@
 @import './core/Mixins.scss';
 
 .detail {
-  width: rem(200);
+  width: rem(250);
   margin: rem(10);
   padding: rem(10);
   display: flex;
@@ -48,9 +48,9 @@
       width: rem(130);
       border-radius: rem(10);
       background: fixed;
-      &:hover {
-        transform: scale(1.1);
-      }
+      // &:hover {
+      //   transform: scale(1.1);
+      // }
     }
   }
   &__name {
@@ -69,6 +69,7 @@
     }
   }
   &__text {
+    &--origin,
     &--location {
       text-align: center;
     }
@@ -93,6 +94,7 @@
       &--origin {
         grid-column: 2/3;
         grid-row: 4/5;
+        text-align: left;
       }
       &--location {
         grid-column: 2/3;
