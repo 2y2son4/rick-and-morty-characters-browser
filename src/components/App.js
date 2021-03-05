@@ -6,6 +6,7 @@ import { Route, Switch } from 'react-router-dom';
 import api from '.././services/api';
 import localStorage from '.././services/localStorage';
 import sortFunc from '.././services/sortFunctions';
+import counters from '.././services/counters';
 
 // components
 
@@ -15,15 +16,16 @@ import Filters from './filters/Filters';
 import CharacterList from './renderCharacters/CharacterList';
 import CharacterDetail from './renderCharacters/CharacterDetail';
 import CharacterNotAvailable from './renderCharacters/CharacterNotAvailable';
+import ChangePage from './filters/ChangePage';
 
 // styles
 import '.././stylesheets/App.scss';
-import ChangePage from './filters/ChangePage';
 
 function App() {
   // hooks
   const [characters, setCharacters] = useState([]);
   const [filteredCharacters, setFilteredCharacters] = useState([]);
+  const [page, setPage] = useState(1);
   const [sortDirection, setSortDirection] = useState('AtoZ');
   const [name, setName] = useState(localStorage.get('name', ''));
   const [species, setSpecies] = useState('');
@@ -32,8 +34,16 @@ function App() {
 
   // call to API
   useEffect(() => {
-    api().then((data) => setCharacters(data));
-  }, []);
+    api(page).then((data) => setCharacters(data));
+  }, [page]);
+
+  const handleLess = () => {
+    counters.less(page, setPage);
+  };
+
+  const handleMore = () => {
+    counters.more(page, setPage);
+  };
 
   useEffect(() => {
     localStorage.set('name', name);
@@ -118,8 +128,8 @@ function App() {
             handleFilter={handleFilter}
             resetBtn={resetSearch}
           />
+          <ChangePage handleLess={handleLess} handleMore={handleMore} page={page} />
           <CharacterList characters={filteredCharacters} resetBtn={resetSearch} />
-          <ChangePage />
         </Route>
         <Route path="/character/:id" render={renderDetail} />
       </Switch>

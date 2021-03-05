@@ -5,8 +5,16 @@
 .arrows {
   display: flex;
   justify-content: space-around;
+  align-items: center;
   color: $dark;
-
+  background-color: $blue2;
+  border: $dark rem(5) solid;
+  border-radius: rem(10);
+  width: rem(400);
+  height: rem(60);
+  @include tablet {
+    width: max-content;
+  }
   &__containerL,
   &__containerR {
     display: flex;
@@ -14,26 +22,44 @@
     cursor: pointer;
   }
   &__containerL {
-    margin-right: rem(50);
     &:hover {
       animation: toTheLeft 1s 8;
     }
+    @include tablet {
+      margin-right: rem(50);
+    }
   }
   &__containerR {
-    margin-left: rem(50);
     &:hover {
       animation: toTheRight 1s 8;
+    }
+    @include tablet {
+      margin-left: rem(50);
     }
   }
   &__prev,
   &__next {
-    font-size: rem(50);
     cursor: pointer;
-    padding: rem(10);
+    font-size: rem(20);
+    padding: rem(5);
+    @include tablet {
+      font-size: rem(50);
+      padding: rem(10);
+    }
   }
   &__text {
-    font-size: rem(24);
-    margin: rem(10);
+    font-size: rem(20);
+    margin: rem(5);
+    @include tablet {
+      font-size: rem(24);
+      margin: rem(10);
+    }
+  }
+  &__counter {
+    font-size: rem(20);
+    @include tablet {
+      font-size: rem(24);
+    }
   }
 }
 
