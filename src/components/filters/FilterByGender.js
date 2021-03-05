@@ -10,15 +10,17 @@ const FilterByGender = (props) => {
       value: ev.target.value,
     });
   };
+
   return (
     <fieldset className="filter__list">
-      <label className="filter__list--label" htmlFor="gender">
+      <label htmlFor="gender" className="filter__list--label">
         Gender:
       </label>
       <select className="filter__list--input" name="gender" id="gender" onChange={handleChange}>
         <option value="">All</option>
-        <option value="female">Female</option>
-        <option value="male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Male">Male</option>
+        <option value="Unknown">Unknown</option>
       </select>
     </fieldset>
   );

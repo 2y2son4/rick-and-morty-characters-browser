@@ -6,6 +6,7 @@ import FilterBySpecies from './FilterBySpecies';
 // import FilterByGender from './FilterByGender';
 import FilterByStatus from './FilterByStatus';
 import ResetBtn from '../reset/ResetBtn';
+import FilterByGender from './FilterByGender';
 
 const Filters = (props) => {
   // prevent submit form
@@ -13,7 +14,7 @@ const Filters = (props) => {
     ev.preventDefault();
   };
 
-  const { name, species, status, handleFilter, resetBtn } = props;
+  const { name, species, status, gender, handleFilter, resetBtn } = props;
 
   return (
     <section className="filter">
@@ -21,8 +22,8 @@ const Filters = (props) => {
       <form className="filter__container" onSubmit={handleForm}>
         <FilterByName name={name} handleFilter={handleFilter} />
         <FilterBySpecies species={species} handleFilter={handleFilter} />
-        {/* <FilterByGender handleFilter={handleFilter} /> */}
         <FilterByStatus status={status} handleFilter={handleFilter} />
+        <FilterByGender gender={gender} handleFilter={handleFilter} />
         <ResetBtn resetBtn={resetBtn} />
       </form>
     </section>
