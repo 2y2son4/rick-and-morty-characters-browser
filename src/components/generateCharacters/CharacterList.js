@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import CharacterCard from './CharacterCard';
 import '../../stylesheets/CharacterList.scss';
+import NotFound from '../NotFound';
 
 const CharacterList = (props) => {
   const characterElement = props.characters.map((character) => {
@@ -13,11 +14,15 @@ const CharacterList = (props) => {
       </li>
     );
   });
-  return (
-    <article className="article">
-      <ul className="list">{characterElement}</ul>
-    </article>
-  );
+  if (characterElement.length > 0) {
+    return (
+      <article className="article">
+        <ul className="list">{characterElement}</ul>
+      </article>
+    );
+  } else {
+    return <NotFound />;
+  }
 };
 
 CharacterList.propTypes = {

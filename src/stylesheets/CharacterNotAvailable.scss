@@ -31,16 +31,16 @@
       background-color: $dark;
       border: $dark solid rem(5);
     }
-  }
-  &__close {
-    padding: rem(5);
-    font-size: rem(24);
-    font-weight: bold;
-    color: $cork;
-    transition: $trans-ease;
-    &:hover {
-      transform: scale(1.1);
-      color: $green3;
+    &--close {
+      padding: rem(5);
+      font-size: rem(24);
+      font-weight: bold;
+      color: $dark;
+      transition: $trans-ease;
+      &:hover {
+        transform: scale(1.1);
+        color: $green3;
+      }
     }
   }
 }

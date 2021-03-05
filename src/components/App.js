@@ -24,7 +24,7 @@ function App() {
   const [name, setName] = useState(localStorage.get('name', ''));
   const [species, setSpecies] = useState('');
   const [status, setStatus] = useState('');
-  const [gender, setGender] = useState('');
+  // const [gender, setGender] = useState('');
 
   // call to API
   useEffect(() => {
@@ -41,7 +41,7 @@ function App() {
     setName('');
     setSpecies('');
     setStatus('');
-    setGender('');
+    // setGender('');
   };
 
   // handler function for search
@@ -52,9 +52,10 @@ function App() {
       setSpecies(input.value);
     } else if (input.key === 'status') {
       setStatus(input.value);
-    } else if (input.key === 'gender') {
-      setGender(input.value);
     }
+    //  else if (input.key === 'gender') {
+    //   setGender(input.value);
+    // }
   };
 
   // filtered array
@@ -71,9 +72,9 @@ function App() {
     .filter((character) => {
       return character.status.toLowerCase().includes(status);
     })
-    .filter((character) => {
-      return character.gender.toLowerCase().includes(gender.toLowerCase());
-    })
+    // .filter((character) => {
+    //   return character.gender.toLowerCase().includes(gender.toLowerCase());
+    // })
     // order by name
     .sort((a, b) => {
       let characterA = a.name.toUpperCase();
@@ -107,14 +108,7 @@ function App() {
       <Header />
       <Switch>
         <Route exact path="/">
-          <Filters
-            name={name}
-            status={status}
-            species={species}
-            gender={gender}
-            handleFilter={handleFilter}
-            resetBtn={resetSearch}
-          />
+          <Filters name={name} status={status} species={species} handleFilter={handleFilter} resetBtn={resetSearch} />
           <CharacterList characters={filterCharacters} />
         </Route>
         <Route path="/character/:id" render={renderDetail} />
