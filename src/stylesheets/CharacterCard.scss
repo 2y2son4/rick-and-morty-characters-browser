@@ -10,15 +10,15 @@
   grid-template-columns: 1fr;
   grid-template-rows: 1fr rem(150) 0.5fr;
   border-radius: rem(20);
-  border: $c8 solid rem(5);
+  border: $yellow3 solid rem(5);
   color: $cork;
   text-align: center;
-  background-color: $c5;
-  transition: all 0.5s linear;
+  background-color: $green4;
+  transition: $trans-ease;
   &:hover {
     transform: scale(1.05);
-    border: $c8 solid rem(5);
-    background-color: $c2;
+    border: $yellow3 solid rem(5);
+    background-color: $green1;
   }
   &__img {
     width: rem(130);
@@ -38,5 +38,12 @@
       padding: rem(10);
       grid-row: 3/4;
     }
+  }
+  &__icon--species {
+    color: $dark;
+  }
+  &__icon--status {
+    color: $dark;
+    width: rem(20);
   }
 }

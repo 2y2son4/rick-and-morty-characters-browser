@@ -2,28 +2,29 @@
 $main-font-text: 'Rubik', sans-serif;
 $defaultFontSize: 16;
 
-// page colors
+// palettes
+$pink1: #e89ac7;
+$pink2: #e4a788;
+$pink3: #f6f9f3;
 
-$light-brand: #30475e;
+$yellow1: #f0e14a;
+$yellow2: #e5ec2e;
+$yellow3: #ece58f;
 
-// logo colors:
-$kobi: #e89ac7;
-$atlantis: #97ce4c;
-$starship: #f0e14a;
-$tonyspink: #e4a788;
 $cork: #44281d;
-$pacificblue: #02afc5;
 
-// portal colors:
-$c1: #303055;
-$c2: #448a32;
-$c3: #6fc41c;
-$c4: #9ecb0e;
-$c5: #92c752;
-$c6: #e5ec2e;
-$c7: #b5c1c3;
-$c8: #ece58f;
-$c9: #f6f9f3;
+$blue1: #02afc5;
+$blue2: #72cefa;
+$blue3: #02424c;
+
+$green1: #448a32;
+$green2: #6fc41c;
+$green3: #9ecb0e;
+$green4: #92c752;
+
+$dark: #303055;
+
+$grey: #b5c1c3;
 
 // transitions
-$trans-bt: 0.8s ease;
+$trans-ease: all 0.8s ease;

@@ -9,11 +9,11 @@
   grid-template-columns: 1fr 2fr;
   grid-template-rows: repeat(6, rem(36));
   border-radius: rem(20);
-  border: $c1 solid rem(5);
-  color: $c1;
-  background-color: $kobi;
+  border: $dark solid rem(5);
+  color: $dark;
+  background-color: $pink1;
   text-align: left;
-  transition: transform 0.5s linear, background-color 0.5s linear, color 0.5s linear;
+  transition: $trans-ease;
   &__bold {
     font-weight: bold;
   }
@@ -42,7 +42,7 @@
     grid-row: 1/2;
     text-align: left;
     padding: rem(5) rem(10);
-    border-bottom: $c1 rem(2) solid;
+    border-bottom: $dark rem(2) solid;
   }
   &__text {
     &--species {
@@ -79,29 +79,29 @@
     @include flexCenter;
     width: rem(40);
     height: rem(40);
-    background-color: $kobi;
+    background-color: $pink1;
     border-radius: 50%;
-    border: $c1 solid rem(5);
+    border: $dark solid rem(5);
     padding: 0 rem(5);
     position: relative;
     left: 97%;
-    transition: all linear 0.8s;
+    transition: $trans-ease;
     &:hover {
       transform: scale(1.1);
-      color: $c4;
-      background-color: $c1;
-      border: $c4 solid rem(5);
+      color: $green3;
+      background-color: $dark;
+      border: $green3 solid rem(5);
     }
   }
   &__close {
     padding: rem(5);
     font-size: rem(42);
     font-weight: bold;
-    color: $c1;
-    transition: all linear 0.8s;
+    color: $dark;
+    transition: $trans-ease;
     &:hover {
       transform: scale(1.1);
-      color: $c4;
+      color: $green3;
     }
   }
 }

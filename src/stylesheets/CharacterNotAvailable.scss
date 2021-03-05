@@ -6,11 +6,11 @@
   margin: rem(10);
   padding: rem(10);
   border-radius: rem(20);
-  border: $c1 solid rem(5);
+  border: $dark solid rem(5);
   color: $cork;
-  background-color: $kobi;
+  background-color: $pink1;
   text-align: left;
-  transition: transform 0.5s linear, background-color 0.5s linear, color 0.5s linear;
+  transition: $trans-ease;
   &__img {
     border-radius: rem(20);
   }
@@ -18,18 +18,18 @@
     @include flexCenter;
     width: rem(40);
     height: rem(40);
-    background-color: $kobi;
+    background-color: $pink1;
     border-radius: 50%;
-    border: $kobi solid rem(5);
+    border: $pink1 solid rem(5);
     padding: 0 rem(5);
     position: relative;
     left: 97%;
-    transition: all linear 0.8s;
+    transition: $trans-ease;
     &:hover {
       transform: scale(1.1);
-      color: $c4;
-      background-color: $c1;
-      border: $c1 solid rem(5);
+      color: $green3;
+      background-color: $dark;
+      border: $dark solid rem(5);
     }
   }
   &__close {
@@ -37,10 +37,10 @@
     font-size: rem(24);
     font-weight: bold;
     color: $cork;
-    transition: all linear 0.8s;
+    transition: $trans-ease;
     &:hover {
       transform: scale(1.1);
-      color: $c4;
+      color: $green3;
     }
   }
 }

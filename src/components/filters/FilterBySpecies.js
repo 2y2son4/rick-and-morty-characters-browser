@@ -11,16 +11,22 @@ const FilterBySpecies = (props) => {
     });
   };
   return (
-    <div className="filter__list">
+    <fieldset className="filter__list">
       <label className="filter__list--label" htmlFor="species">
         Species:
       </label>
       <select className="filter__list--input" name="species" id="species" value={species} onChange={handleChange}>
-        <option value="">All</option>
-        <option value="alien">Alien</option>
-        <option value="human">Human</option>
+        <option className="filter__list--option" value="">
+          All
+        </option>
+        <option className="filter__list--option" value="alien">
+          Alien
+        </option>
+        <option className="filter__list--option" value="human">
+          Human
+        </option>
       </select>
-    </div>
+    </fieldset>
   );
 };
 

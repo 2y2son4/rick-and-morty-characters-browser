@@ -3,12 +3,12 @@
 @import './core/Mixins.scss';
 
 .filter {
-  background-color: $c2;
+  background-color: $green1;
   margin: rem(10);
   padding: rem(10);
   border-radius: rem(20);
-  border: $c8 solid rem(5);
-  color: $c8;
+  border: $yellow3 solid rem(5);
+  color: $yellow3;
   height: max-content;
   @include flexCenter {
     flex-direction: column;
@@ -19,7 +19,7 @@
   &__title {
     font-size: rem(24);
     margin: rem(5);
-    border-bottom: $c8 rem(2) solid;
+    border-bottom: $yellow3 rem(2) solid;
   }
   &__list {
     @include flexCenter {
@@ -34,9 +34,22 @@
       border-radius: rem(10);
       margin: rem(5);
       border: none;
-      transition: background-color 0.8s linear;
+      transition: $trans-ease;
       &:hover {
-        background-color: $c5;
+        background-color: $blue1;
+        &::placeholder {
+          color: transparent;
+        }
+      }
+      &::placeholder {
+        color: $blue1;
+        transition: $trans-ease;
+      }
+      &:focus::placeholder {
+        color: transparent;
+      }
+      &--option {
+        color: $green1;
       }
     }
     &--label {
@@ -51,7 +64,7 @@
       width: 150px;
       height: 40px;
       &:hover {
-        background-color: $c5;
+        background-color: $green4;
       }
     }
     &--cities {

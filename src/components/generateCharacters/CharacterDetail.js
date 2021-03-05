@@ -1,22 +1,29 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import alive from '../../images/icons/alive-icon.png';
 import '../../stylesheets/CharacterDetail.scss';
 
 const CharacterDetail = (props) => {
   const { name, image, gender, status, origin, location, species, episodes } = props.character;
 
+  const alienIcon = <i className="fas fa-pastafarianism card__icon--species" title="Alien"></i>;
+  const humanIcon = <i className="fas fa-user card__icon--species" title="Human"></i>;
+  const aliveIcon = <img src={alive} alt="Alive" className="fas fa-kiss card__icon--status" title="Alive" />;
+  const DeadIcon = <i className="fas fa-dizzy card__icon--status" title="Dead"></i>;
+  const unknownIcon = <i className="fas fa-question-circle card__icon--status" title="Status unknown"></i>;
+
   const iconSpecies = () => {
-    return species === 'Alien' ? <i className="fas fa-pastafarianism"></i> : <i className="fas fa-user"></i>;
+    return species === 'Alien' ? alienIcon : humanIcon;
   };
 
   const iconStatus = () => {
     if (status === 'Alive') {
-      return <i className="far fa-kiss"></i>;
+      return aliveIcon;
     } else if (status === 'Dead') {
-      return <i className="far fa-dizzy"></i>;
+      return DeadIcon;
     } else {
-      return <i className="fas fa-question"></i>;
+      return unknownIcon;
     }
   };
 

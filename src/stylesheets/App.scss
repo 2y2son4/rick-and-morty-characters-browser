@@ -8,10 +8,10 @@
 }
 
 .App-header {
-  background-color: $c1;
+  background-color: $dark;
   min-height: 100vh;
   @include flexCenter {
     flex-direction: column;
   }
-  color: $c8;
+  color: $yellow3;
 }

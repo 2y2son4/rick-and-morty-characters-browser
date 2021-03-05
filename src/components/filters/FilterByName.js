@@ -11,7 +11,7 @@ const FilterByName = (props) => {
     });
   };
   return (
-    <div className="filter__list">
+    <fieldset className="filter__list">
       <label className="filter__list--label" htmlFor="name">
         Name:
       </label>
@@ -21,9 +21,10 @@ const FilterByName = (props) => {
         name="name"
         value={name}
         id="characterSearch"
+        placeholder="Mr. Poopy Butthole"
         onChange={handleChange}
       />
-    </div>
+    </fieldset>
   );
 };
 

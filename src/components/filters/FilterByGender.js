@@ -11,7 +11,7 @@ const FilterByGender = (props) => {
     });
   };
   return (
-    <div className="filter__list">
+    <fieldset className="filter__list">
       <label className="filter__list--label" htmlFor="gender">
         Gender:
       </label>
@@ -20,7 +20,7 @@ const FilterByGender = (props) => {
         <option value="female">Female</option>
         <option value="male">Male</option>
       </select>
-    </div>
+    </fieldset>
   );
 };
 

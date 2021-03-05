@@ -5,25 +5,25 @@
 .reset {
   margin: rem(10);
   align-self: flex-end;
-  background-color: $c2;
+  background-color: $green1;
   width: rem(50);
   height: rem(50);
   border-radius: 50%;
-  border: $c8 rem(5) solid;
+  border: $yellow3 rem(5) solid;
   cursor: pointer;
-  transition: all linear 0.8s;
+  transition: $trans-ease;
   &:hover {
-    background-color: $c1;
-    border: $c4 rem(5) solid;
+    background-color: $blue1;
+    border: $dark rem(5) solid;
     transform: scale(1.1);
   }
   &__icon {
     padding: rem(8);
-    color: $c8;
+    color: $yellow3;
     font-size: rem(24);
-    transition: all linear 0.5s;
+    transition: $trans-ease;
     &:hover {
-      color: $c4;
+      color: $dark;
     }
   }
 }

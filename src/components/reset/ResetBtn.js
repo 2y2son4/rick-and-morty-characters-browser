@@ -9,7 +9,7 @@ const ResetBtn = (props) => {
 
   return (
     <button className="reset" onClick={resetBtn}>
-      <i className="fa fa-refresh reset__icon"></i>
+      <i className="fas fa-reply reset__icon"></i>
     </button>
   );
 };

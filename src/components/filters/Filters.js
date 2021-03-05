@@ -5,7 +5,7 @@ import '../../stylesheets/Filters.scss';
 import FilterBySpecies from './FilterBySpecies';
 // import FilterByGender from './FilterByGender';
 import FilterByStatus from './FilterByStatus';
-import ResetBtn from '../extra/ResetBtn';
+import ResetBtn from '../reset/ResetBtn';
 
 const Filters = (props) => {
   // prevent submit form
