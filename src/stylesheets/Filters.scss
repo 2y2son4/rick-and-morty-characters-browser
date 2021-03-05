@@ -36,13 +36,13 @@
       border: none;
       transition: $trans-ease;
       &:hover {
-        background-color: $blue1;
+        background-color: $blue2;
         &::placeholder {
           color: transparent;
         }
       }
       &::placeholder {
-        color: $blue1;
+        color: $blue2;
         transition: $trans-ease;
       }
       &:focus::placeholder {
