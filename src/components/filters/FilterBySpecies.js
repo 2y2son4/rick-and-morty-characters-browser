@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const FilterBySpecies = (props) => {
-  const { species, handleForm } = props;
+  const { species, handleFilter } = props;
 
   const handleChange = (ev) => {
-    handleForm({
+    handleFilter({
       key: 'species',
       value: ev.target.value,
     });
@@ -31,7 +31,7 @@ const FilterBySpecies = (props) => {
 };
 
 FilterBySpecies.propTypes = {
-  handleForm: PropTypes.func,
+  handleFilter: PropTypes.func,
 };
 
 export default FilterBySpecies;
