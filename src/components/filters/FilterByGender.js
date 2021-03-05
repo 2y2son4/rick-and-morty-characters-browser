@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const FilterByGender = (props) => {
-  const { gender, handleFilter } = props;
+  const { gender, handleForm } = props;
 
   const handleChange = (ev) => {
-    handleFilter({
+    handleForm({
       key: 'gender',
       value: ev.target.value,
     });
@@ -27,7 +27,7 @@ const FilterByGender = (props) => {
 };
 
 FilterByGender.propTypes = {
-  handleFilter: PropTypes.func,
+  handleForm: PropTypes.func,
 };
 
 export default FilterByGender;

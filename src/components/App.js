@@ -5,6 +5,7 @@ import { Route, Switch } from 'react-router-dom';
 // services
 import api from '../services/api';
 import localStorage from '.././services/localStorage';
+import sortFunc from '.././services/sortFunctions';
 
 // components
 
@@ -21,6 +22,9 @@ import '.././stylesheets/App.scss';
 function App() {
   // hooks
   const [characters, setCharacters] = useState([]);
+  const [filteredCharacters, setFilteredCharacters] = useState([]);
+  const [sortDirection, setSortDirection] = useState('AtoZ');
+  // const [sortAZ, setSortAZ] = useState(true);
   const [name, setName] = useState(localStorage.get('name', ''));
   const [species, setSpecies] = useState('');
   const [status, setStatus] = useState('');
@@ -34,6 +38,31 @@ function App() {
   useEffect(() => {
     localStorage.set('name', name);
   }, [name]);
+
+  useEffect(() => {
+    const filteredArray = characters
+      // by name
+      .filter((character) => {
+        return character.name.toLowerCase().includes(name.toLowerCase());
+      })
+      // by species
+      .filter((character) => {
+        return character.species.toLowerCase().includes(species);
+      })
+      // by status
+      .filter((character) => {
+        return character.status.toLowerCase().includes(status);
+      })
+      .filter((character) => {
+        // debugger;
+        return !gender || character.gender.toLowerCase() === gender;
+      });
+
+    // order by name
+    sortDirection === 'AtoZ' ? sortFunc.sortAZ(filteredArray) : sortFunc.sortZA(filteredArray);
+
+    setFilteredCharacters(filteredArray);
+  }, [characters, name, species, status, gender, sortDirection]);
 
   // reset button
   const resetSearch = () => {
@@ -54,39 +83,10 @@ function App() {
       setStatus(input.value);
     } else if (input.key === 'gender') {
       setGender(input.value);
+    } else if (input.key === 'sort') {
+      setSortDirection(input.value);
     }
   };
-
-  // filtered array
-  const filterCharacters = characters
-    // by name
-    .filter((character) => {
-      return character.name.toLowerCase().includes(name.toLowerCase());
-    })
-    // by species
-    .filter((character) => {
-      return character.species.toLowerCase().includes(species);
-    })
-    // by status
-    .filter((character) => {
-      return character.status.toLowerCase().includes(status);
-    })
-    .filter((character) => {
-      // debugger;
-      return !gender || character.gender.toLowerCase() === gender;
-    })
-    // order by name
-    .sort((a, b) => {
-      let characterA = a.name.toUpperCase();
-      let characterB = b.name.toUpperCase();
-      if (characterA < characterB) {
-        return -1;
-      }
-      if (characterA > characterB) {
-        return 1;
-      }
-      return 0;
-    });
 
   // function to render character detailed card and url id
   const renderDetail = (props) => {
@@ -113,10 +113,11 @@ function App() {
             status={status}
             gender={gender}
             species={species}
+            sortDirection={sortDirection}
             handleFilter={handleFilter}
             resetBtn={resetSearch}
           />
-          <CharacterList characters={filterCharacters} />
+          <CharacterList characters={filteredCharacters} />
         </Route>
         <Route path="/character/:id" render={renderDetail} />
       </Switch>
