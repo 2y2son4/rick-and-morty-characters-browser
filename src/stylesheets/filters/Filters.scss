@@ -15,7 +15,6 @@
       flex-direction: column;
     }
   }
-
   &__container {
     display: flex;
     align-items: center;
@@ -29,7 +28,11 @@
   &__title {
     font-size: rem(28);
     margin: rem(5);
+    padding-bottom: rem(5);
     border-bottom: $yellow3 rem(2) solid;
+    @include tablet {
+      width: 100%;
+    }
   }
   &__list {
     @include flexCenter {

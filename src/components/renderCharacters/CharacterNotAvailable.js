@@ -1,9 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import '../../stylesheets/generateCharacters/CharacterNotAvailable.scss';
-
-import imageNotAvailable from '../../images/cards/404-card-desktop.png';
+import '../../stylesheets/renderCharacters/CharacterNotAvailable.scss';
 
 const CharacterNotAvailable = () => {
   return (
@@ -14,7 +12,7 @@ const CharacterNotAvailable = () => {
         </span>
       </Link>
       <div className="notAvailable">
-        <img className="notAvailable__img" src={imageNotAvailable} alt="Character not found. Aw geez" />
+        <div className="notAvailable__img" alt="Character not found. Aw geez"></div>
       </div>
     </div>
   );

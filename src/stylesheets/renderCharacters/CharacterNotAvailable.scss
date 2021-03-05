@@ -11,6 +11,19 @@
   background-color: $pink1;
   text-align: left;
   transition: $trans-ease;
+  width: rem(400);
+  height: rem(500);
+  background-image: url('../.././images/cards/404-card-mobile.png');
+  background-repeat: no-repeat;
+  background-size: rem(450);
+  background-position: center;
+
+  @include tablet {
+    width: rem(700);
+    height: rem(400);
+    background-image: url('../.././images/cards/404-card-desktop.png');
+    background-size: rem(700);
+  }
   &__img {
     border-radius: rem(10);
   }

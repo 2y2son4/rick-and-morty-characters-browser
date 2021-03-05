@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import icons from '../.././services/icons';
 
-import '../../stylesheets/generateCharacters/CharacterCard.scss';
+import '../../stylesheets/renderCharacters/CharacterCard.scss';
 
 const CharacterCard = (props) => {
   const { name, image, species, id, status } = props.character;

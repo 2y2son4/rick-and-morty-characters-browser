@@ -11,10 +11,9 @@
     font-weight: 600;
     color: $brown1;
     &--link {
-      color: $brown1;
+      color: $dark;
       &:hover {
-        color: $dark;
-        border-bottom: $dark rem(2) solid;
+        color: $blue1;
       }
     }
   }

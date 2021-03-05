@@ -1,0 +1,68 @@
+@import '.././core/Functions.scss';
+@import '.././core/Variables.scss';
+@import '.././core/Mixins.scss';
+
+.arrows {
+  display: flex;
+  justify-content: space-around;
+  color: $dark;
+
+  &__containerL,
+  &__containerR {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  &__containerL {
+    margin-right: rem(50);
+    &:hover {
+      animation: toTheLeft 1s 8;
+    }
+  }
+  &__containerR {
+    margin-left: rem(50);
+    &:hover {
+      animation: toTheRight 1s 8;
+    }
+  }
+  &__prev,
+  &__next {
+    font-size: rem(50);
+    cursor: pointer;
+    padding: rem(10);
+  }
+  &__text {
+    font-size: rem(24);
+    margin: rem(10);
+  }
+}
+
+@keyframes toTheLeft {
+  0% {
+    transform: translateX(-15px);
+  }
+  25% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-15px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes toTheRight {
+  0% {
+    transform: translateX(15px);
+  }
+  25% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(15px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

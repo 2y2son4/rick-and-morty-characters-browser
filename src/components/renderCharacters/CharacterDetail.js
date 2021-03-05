@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import icons from '../.././services/icons';
 
-import '../../stylesheets/generateCharacters/CharacterDetail.scss';
+import '../../stylesheets/renderCharacters/CharacterDetail.scss';
 
 const CharacterDetail = (props) => {
   const { name, image, gender, status, origin, location, species, episodes } = props.character;

@@ -9,7 +9,8 @@ import ResetBtn from '../reset/ResetBtn';
 
 import SortByName from './SortByName';
 
-import '../../stylesheets/filters/Filters.scss';
+import '../.././stylesheets/filters/Filters.scss';
+import iconSearch from '../.././images/search/search_icon.png';
 
 const Filters = (props) => {
   // prevent submit form
@@ -21,7 +22,11 @@ const Filters = (props) => {
 
   return (
     <section className="filter">
-      <h2 className="filter__title">Show me what you got</h2>
+      <h2 className="filter__title">
+        <img src={iconSearch} alt="Search icon" className="filter__icon" />
+        Show me what you got
+        <img src={iconSearch} alt="Search icon" className="filter__icon" />
+      </h2>
       <form className="filter__container" onSubmit={HandleForm}>
         <FilterByName name={name} handleFilter={handleFilter} />
         <FilterBySpecies species={species} handleFilter={handleFilter} />

@@ -2,7 +2,7 @@ import React from 'react';
 
 import ResetBtn from '../reset/ResetBtn';
 
-import '../.././stylesheets/generateCharacters/CharacterNotFound.scss';
+import '../.././stylesheets/renderCharacters/CharacterNotFound.scss';
 
 import terry from '../.././images/gifs/terry.gif';
 

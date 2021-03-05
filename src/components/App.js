@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Route, Switch } from 'react-router-dom';
 
 // services
-import api from '../services/api';
+import api from '.././services/api';
 import localStorage from '.././services/localStorage';
 import sortFunc from '.././services/sortFunctions';
 
@@ -12,12 +12,13 @@ import sortFunc from '.././services/sortFunctions';
 import Header from './layout/Header';
 import Footer from './layout/Footer';
 import Filters from './filters/Filters';
-import CharacterList from './generateCharacters/CharacterList';
-import CharacterDetail from './generateCharacters/CharacterDetail';
-import CharacterNotAvailable from './generateCharacters/CharacterNotAvailable';
+import CharacterList from './renderCharacters/CharacterList';
+import CharacterDetail from './renderCharacters/CharacterDetail';
+import CharacterNotAvailable from './renderCharacters/CharacterNotAvailable';
 
 // styles
 import '.././stylesheets/App.scss';
+import ChangePage from './filters/ChangePage';
 
 function App() {
   // hooks
@@ -66,6 +67,7 @@ function App() {
   // reset button
   const resetSearch = () => {
     setCharacters(characters);
+    setSortDirection('AtoZ');
     setName('');
     setSpecies('');
     setStatus('');
@@ -117,6 +119,7 @@ function App() {
             resetBtn={resetSearch}
           />
           <CharacterList characters={filteredCharacters} resetBtn={resetSearch} />
+          <ChangePage />
         </Route>
         <Route path="/character/:id" render={renderDetail} />
       </Switch>

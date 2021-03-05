@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import CharacterCard from './CharacterCard';
 
-import '../../stylesheets/generateCharacters/CharacterList.scss';
+import '../../stylesheets/renderCharacters/CharacterList.scss';
 
 import CharacterNotFound from './CharacterNotFound';
 
