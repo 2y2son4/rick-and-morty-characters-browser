@@ -3,11 +3,19 @@
 @import './core/Mixins.scss';
 
 .header {
+  @include flexCenter {
+    flex-direction: column;
+  }
+  color: $yellow3;
   &__title {
     display: none;
   }
   &__img {
-    width: rem(450);
+    width: rem(300);
+    @include tablet {
+      width: rem(450);
+    }
+
     margin: rem(40);
   }
 }

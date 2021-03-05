@@ -3,33 +3,50 @@
 @import './core/Mixins.scss';
 
 .detail {
+  width: rem(200);
   margin: rem(10);
   padding: rem(10);
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-template-rows: repeat(6, rem(36));
-  border-radius: rem(20);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  border-radius: rem(10);
   border: $dark solid rem(5);
   color: $dark;
   background-color: $pink1;
   text-align: left;
   transition: $trans-ease;
+  @include tablet {
+    width: rem(500);
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: repeat(6, rem(36));
+  }
   &__bold {
+    text-align: center;
     font-weight: bold;
+    @include tablet {
+      text-align: left;
+    }
   }
   &__lower {
+    text-align: center;
     text-transform: lowercase;
+    @include tablet {
+      text-align: left;
+    }
   }
   &__img {
     &--parent {
-      grid-column: 1 / 2;
-      grid-row: 2/6;
       align-self: center;
       justify-self: center;
+      @include tablet {
+        grid-column: 1 / 2;
+        grid-row: 2/6;
+      }
     }
     &--child {
       width: rem(130);
-      border-radius: 30%;
+      border-radius: rem(10);
       background: fixed;
       &:hover {
         transform: scale(1.1);
@@ -37,42 +54,55 @@
     }
   }
   &__name {
-    font-size: rem(20);
-    grid-column: 2/3;
-    grid-row: 1/2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    font-size: rem(22);
     text-align: left;
     padding: rem(5) rem(10);
-    border-bottom: $dark rem(2) solid;
+    @include tablet {
+      border-bottom: $dark rem(2) solid;
+      display: inline;
+      grid-column: 2/3;
+      grid-row: 1/2;
+    }
   }
   &__text {
-    &--species {
-      grid-column: 2/3;
-      grid-row: 2/3;
-    }
-    &--status {
-      grid-column: 2/3;
-      grid-row: 3/4;
-    }
-    &--origin {
-      grid-column: 2/3;
-      grid-row: 4/5;
-    }
     &--location {
-      grid-column: 2/3;
-      grid-row: 5/6;
-    }
-    &--episodes {
-      grid-column: 2/3;
-      grid-row: 6/7;
+      text-align: center;
     }
     &--status,
     &--species,
     &--origin,
     &--location,
     &--episodes {
-      font-size: rem(16);
+      font-size: rem(18);
       padding-top: rem(10);
       padding-left: rem(10);
+    }
+    @include tablet {
+      &--species {
+        grid-column: 2/3;
+        grid-row: 2/3;
+      }
+      &--status {
+        grid-column: 2/3;
+        grid-row: 3/4;
+      }
+      &--origin {
+        grid-column: 2/3;
+        grid-row: 4/5;
+      }
+      &--location {
+        grid-column: 2/3;
+        grid-row: 5/6;
+        text-align: left;
+      }
+      &--episodes {
+        grid-column: 2/3;
+        grid-row: 6/7;
+      }
     }
   }
   &__span {

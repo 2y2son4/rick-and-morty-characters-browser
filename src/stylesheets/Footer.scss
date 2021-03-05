@@ -3,13 +3,12 @@
 @import './core/Mixins.scss';
 
 .footer {
-  font-size: rem(24);
   width: 100%;
   height: rem(50);
   padding: rem(5);
   @include flexCenter;
   &__span {
-    font-size: rem(18);
+    font-size: rem(22);
     font-weight: 600;
     color: $brown1;
     &--link {
@@ -19,19 +18,5 @@
         border-bottom: $dark rem(2) solid;
       }
     }
-  }
-}
-
-.fly-in-bottom {
-  animation: flyinBottom 1.2s ease-in;
-}
-@keyframes flyinBottom {
-  0% {
-    transform: translatey(rem(1000));
-    opacity: 0;
-  }
-  100% {
-    transform: translatey(0);
-    opacity: 1;
   }
 }

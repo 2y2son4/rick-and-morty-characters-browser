@@ -12,7 +12,7 @@
   text-align: left;
   transition: $trans-ease;
   &__img {
-    border-radius: rem(20);
+    border-radius: rem(10);
   }
   &__span {
     @include flexCenter;
