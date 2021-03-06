@@ -4,21 +4,24 @@
 
 .card {
   cursor: pointer;
-  width: rem(200);
+  width: rem(150);
   height: rem(300);
   margin: rem(10);
   padding: rem(5);
-  @include flexCenter {
-    flex-direction: column;
-  }
-  // grid-template-columns: 1fr;
-  // grid-template-rows: 1fr rem(150) 0.5fr;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr rem(150) 0.5fr;
+  grid-auto-rows: auto;
+  grid-auto-columns: auto;
   border-radius: rem(10);
   border: $yellow3 solid rem(5);
   color: $brown1;
   text-align: center;
   background-color: $green4;
   transition: $trans-ease;
+  @include tablet {
+    width: rem(200);
+  }
   &:hover {
     transform: scale(1.05);
     border: $yellow3 solid rem(5);
@@ -28,13 +31,13 @@
     width: rem(130);
     border-radius: rem(10);
     grid-row: 2/3;
-    margin: auto;
+    justify-self: center;
   }
   &__name {
     font-size: rem(20);
     padding: rem(10);
     grid-row: 1/2;
-    border-bottom: $brown1 rem(2) solid;
+    align-self: center;
   }
   &__text {
     &--species {

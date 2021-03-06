@@ -11,11 +11,11 @@
   background-color: $pink1;
   text-align: left;
   transition: $trans-ease;
-  width: rem(400);
-  height: rem(500);
+  width: rem(300);
+  height: rem(450);
   background-image: url('../.././images/cards/404-card-mobile.png');
   background-repeat: no-repeat;
-  background-size: rem(450);
+  background-size: rem(380);
   background-position: center;
 
   @include tablet {
@@ -36,8 +36,12 @@
     border: $pink1 solid rem(5);
     padding: 0 rem(5);
     position: relative;
-    left: 97%;
+    left: 90%;
     transition: $trans-ease;
+    @include tablet {
+      position: relative;
+      left: 97%;
+    }
     &:hover {
       transform: scale(1.1);
       color: $green3;

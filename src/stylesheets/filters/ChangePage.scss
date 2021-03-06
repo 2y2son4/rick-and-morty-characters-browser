@@ -10,10 +10,11 @@
   background-color: $blue2;
   border: $dark rem(5) solid;
   border-radius: rem(10);
-  width: rem(400);
-  height: rem(50);
+  width: rem(300);
+  height: rem(46);
   @include tablet {
     width: max-content;
+    eight: rem(50);
   }
   &__containerL,
   &__containerR {
@@ -27,34 +28,34 @@
   }
   &__containerL {
     &:hover {
-      animation: toTheLeft 1s 8;
+      animation: toTheLeft 1s 2;
     }
   }
   &__containerR {
     &:hover {
-      animation: toTheRight 1s 8;
+      animation: toTheRight 1s 2;
     }
   }
   &__prev,
   &__next {
     cursor: pointer;
-    font-size: rem(20);
-    padding: rem(5);
+    font-size: rem(16);
+    padding: rem(3);
     @include tablet {
       font-size: rem(30);
       padding: rem(10);
     }
   }
   &__text {
-    font-size: rem(20);
-    margin: rem(5);
+    font-size: rem(16);
+    margin: rem(3);
     @include tablet {
       font-size: rem(22);
       margin: rem(10);
     }
   }
   &__counter {
-    font-size: rem(20);
+    font-size: rem(18);
     @include tablet {
       font-size: rem(22);
     }
