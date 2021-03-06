@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "./static/css/main.ed280153.chunk.css",
-    "main.js": "./static/js/main.527c4232.chunk.js",
-    "main.js.map": "./static/js/main.527c4232.chunk.js.map",
+    "main.css": "./static/css/main.b8847235.chunk.css",
+    "main.js": "./static/js/main.ef07f92d.chunk.js",
+    "main.js.map": "./static/js/main.ef07f92d.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.2544e4f0.js",
     "runtime-main.js.map": "./static/js/runtime-main.2544e4f0.js.map",
     "static/js/2.05acb8db.chunk.js": "./static/js/2.05acb8db.chunk.js",
     "static/js/2.05acb8db.chunk.js.map": "./static/js/2.05acb8db.chunk.js.map",
     "index.html": "./index.html",
-    "static/css/main.ed280153.chunk.css.map": "./static/css/main.ed280153.chunk.css.map",
+    "static/css/main.b8847235.chunk.css.map": "./static/css/main.b8847235.chunk.css.map",
     "static/js/2.05acb8db.chunk.js.LICENSE.txt": "./static/js/2.05acb8db.chunk.js.LICENSE.txt",
     "static/media/CharacterNotAvailable.scss": "./static/media/404-card-mobile.d83d4d11.png",
     "static/media/App.scss": "./static/media/bg1.b776a648.jpg",
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.2544e4f0.js",
     "static/js/2.05acb8db.chunk.js",
-    "static/css/main.ed280153.chunk.css",
-    "static/js/main.527c4232.chunk.js"
+    "static/css/main.b8847235.chunk.css",
+    "static/js/main.ef07f92d.chunk.js"
   ]
 }
