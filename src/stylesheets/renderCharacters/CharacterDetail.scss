@@ -4,8 +4,7 @@
 
 .detail {
   width: rem(250);
-  margin: rem(10);
-  padding: rem(10);
+  padding: rem(5);
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -16,10 +15,12 @@
   text-align: left;
   transition: $trans-ease;
   @include tablet {
-    width: rem(500);
+    width: max-content;
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: rem(150) auto;
     grid-template-rows: repeat(6, rem(36));
+    grid-auto-rows: auto;
+    grid-auto-columns: auto;
   }
   &__bold {
     text-align: center;
@@ -41,7 +42,7 @@
       justify-self: center;
       @include tablet {
         grid-column: 1 / 2;
-        grid-row: 2/6;
+        grid-row: 1/6;
       }
     }
     &--child {
@@ -61,12 +62,14 @@
     font-size: rem(22);
     text-align: center;
     padding: rem(5) rem(10);
+    width: 100%;
     @include tablet {
-      border-bottom: $dark rem(2) solid;
       display: inline;
       grid-column: 2/3;
       grid-row: 1/2;
       text-align: left;
+      align-self: flex-end;
+      border-bottom: $dark rem(2) solid;
     }
   }
   &__text {
@@ -79,9 +82,14 @@
     &--origin,
     &--location,
     &--episodes {
+      width: 100%;
       font-size: rem(18);
       padding-top: rem(10);
-      padding-left: rem(10);
+      text-align: center;
+      @include tablet {
+        text-align: left;
+        padding-left: rem(10);
+      }
     }
     @include tablet {
       &--species {

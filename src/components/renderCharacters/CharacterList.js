@@ -7,7 +7,8 @@ import '../../stylesheets/renderCharacters/CharacterList.scss';
 import CharacterNotFound from './CharacterNotFound';
 
 const CharacterList = (props) => {
-  const { characters, resetBtn } = props;
+  const { characters, resetBtn, search } = props;
+
   const characterElement = characters.map((character) => {
     const { id } = character;
 
@@ -24,7 +25,7 @@ const CharacterList = (props) => {
       </article>
     );
   } else {
-    return <CharacterNotFound resetBtn={resetBtn} />;
+    return <CharacterNotFound resetBtn={resetBtn} search={search} />;
   }
 };
 

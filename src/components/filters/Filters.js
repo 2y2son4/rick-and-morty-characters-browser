@@ -32,8 +32,8 @@ const Filters = (props) => {
         <FilterBySpecies species={species} handleFilter={handleFilter} />
         <FilterByStatus status={status} handleFilter={handleFilter} />
         <FilterByGender gender={gender} handleFilter={handleFilter} />
-        <ResetBtn resetBtn={resetBtn} classResetBtn={'reset'} classResetIcon={'reset__icon'} />
         <SortByName sortDirection={sortDirection} handleFilter={handleFilter} />
+        <ResetBtn resetBtn={resetBtn} classResetBtn={'reset'} classResetIcon={'reset__icon'} />
       </form>
     </section>
   );

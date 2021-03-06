@@ -11,7 +11,7 @@
   border: $dark rem(5) solid;
   border-radius: rem(10);
   width: rem(400);
-  height: rem(60);
+  height: rem(50);
   @include tablet {
     width: max-content;
   }
@@ -20,21 +20,19 @@
     display: flex;
     align-items: center;
     cursor: pointer;
+    @include tablet {
+      margin-right: rem(30);
+      margin-left: rem(30);
+    }
   }
   &__containerL {
     &:hover {
       animation: toTheLeft 1s 8;
     }
-    @include tablet {
-      margin-right: rem(50);
-    }
   }
   &__containerR {
     &:hover {
       animation: toTheRight 1s 8;
-    }
-    @include tablet {
-      margin-left: rem(50);
     }
   }
   &__prev,
@@ -43,7 +41,7 @@
     font-size: rem(20);
     padding: rem(5);
     @include tablet {
-      font-size: rem(50);
+      font-size: rem(30);
       padding: rem(10);
     }
   }
@@ -51,14 +49,14 @@
     font-size: rem(20);
     margin: rem(5);
     @include tablet {
-      font-size: rem(24);
+      font-size: rem(22);
       margin: rem(10);
     }
   }
   &__counter {
     font-size: rem(20);
     @include tablet {
-      font-size: rem(24);
+      font-size: rem(22);
     }
   }
 }

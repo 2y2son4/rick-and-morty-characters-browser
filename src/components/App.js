@@ -129,7 +129,7 @@ function App() {
             resetBtn={resetSearch}
           />
           <ChangePage handleLess={handleLess} handleMore={handleMore} page={page} />
-          <CharacterList characters={filteredCharacters} resetBtn={resetSearch} />
+          <CharacterList characters={filteredCharacters} resetBtn={resetSearch} search={name} />
         </Route>
         <Route path="/character/:id" render={renderDetail} />
       </Switch>

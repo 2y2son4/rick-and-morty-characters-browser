@@ -10,7 +10,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-
+  margin: rem(10);
   @include tablet {
     width: rem(500);
     justify-content: center;
@@ -18,11 +18,14 @@
   &__text {
     color: $dark;
     font-weight: bold;
-    font-size: rem(30);
+    font-size: rem(24);
     margin: rem(10);
+    &--search {
+      color: $blue2;
+    }
   }
   &__img {
-    width: rem(250);
+    width: rem(200);
     background-color: $pink3;
     border-radius: rem(10);
     margin: rem(10);

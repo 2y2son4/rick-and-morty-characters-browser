@@ -42,9 +42,9 @@
     &--input {
       cursor: pointer;
       font-size: rem(16);
-      padding: rem(10);
-      width: rem(150);
-      height: rem(40);
+      padding-left: rem(5);
+      width: rem(80);
+      height: rem(30);
       border-radius: rem(10);
       margin: rem(5);
       border: none;
@@ -60,6 +60,10 @@
       }
       &--option {
         color: $green1;
+      }
+      @include tablet {
+        width: rem(100);
+        height: rem(40);
       }
     }
     &--label {

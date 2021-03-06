@@ -1,8 +1,0 @@
-.header {
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-end;
-	align-items: center;
-	height: 100vh;
-	background: url("../images/cover.jpg") no-repeat center / cover fixed;
-}

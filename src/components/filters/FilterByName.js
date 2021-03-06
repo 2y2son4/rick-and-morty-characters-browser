@@ -21,7 +21,7 @@ const FilterByName = (props) => {
         name="name"
         value={name}
         id="characterSearch"
-        placeholder="Mr. Poopy Butthole"
+        placeholder="Squanchy"
         onChange={handleChange}
       />
     </fieldset>
