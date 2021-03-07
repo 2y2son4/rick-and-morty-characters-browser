@@ -12,13 +12,12 @@ const CharacterCard = (props) => {
   return (
     <Link to={`/character/${id}`}>
       <div className="card">
-        <h4 className="card__name">
-          {name} {icons.status(status)}
-        </h4>
+        <h4 className="card__name">{name}</h4>
         <img className="card__img" src={image} alt={name} />
         <p className="card__text--species">
           {species} {icons.species(species)}
-        </p>
+        </p>{' '}
+        <p className="card__text--status">{icons.status(status)}</p>
       </div>
     </Link>
   );

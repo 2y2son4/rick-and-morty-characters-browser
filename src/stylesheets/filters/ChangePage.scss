@@ -2,6 +2,11 @@
 @import '.././core/Variables.scss';
 @import '.././core/Mixins.scss';
 
+.nav {
+  position: sticky;
+  top: 0;
+  padding-top: rem(10);
+}
 .arrows {
   display: flex;
   justify-content: space-around;
@@ -14,7 +19,7 @@
   height: rem(46);
   @include tablet {
     width: max-content;
-    eight: rem(50);
+    height: rem(50);
   }
   &__containerL,
   &__containerR {
@@ -28,12 +33,12 @@
   }
   &__containerL {
     &:hover {
-      animation: toTheLeft 1s 2;
+      animation: toTheLeft 1s 1;
     }
   }
   &__containerR {
     &:hover {
-      animation: toTheRight 1s 2;
+      animation: toTheRight 1s 1;
     }
   }
   &__prev,

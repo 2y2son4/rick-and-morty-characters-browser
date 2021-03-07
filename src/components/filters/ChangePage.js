@@ -6,7 +6,7 @@ const ChangePage = (props) => {
   const { page, handleLess, handleMore } = props;
 
   return (
-    <nav>
+    <nav className="nav">
       <ul className="arrows">
         <li key="left" className="arrows__containerL" onClick={handleLess}>
           <i className="fas fa-angle-double-left arrows__prev"></i>

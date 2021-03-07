@@ -6,11 +6,11 @@
   cursor: pointer;
   width: rem(150);
   height: rem(300);
-  margin: rem(10);
+  margin: rem(5);
   padding: rem(5);
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr rem(150) 0.5fr;
+  grid-template-columns: 1fr 0.5fr;
+  grid-template-rows: 1fr rem(130) 0.8fr;
   grid-auto-rows: auto;
   grid-auto-columns: auto;
   border-radius: rem(10);
@@ -23,37 +23,46 @@
     width: rem(200);
   }
   &:hover {
-    transform: scale(1.05);
-    border: $yellow3 solid rem(5);
     background-color: $green1;
   }
   &__img {
-    width: rem(130);
+    width: rem(120);
     border-radius: rem(10);
+    grid-column: 1/3;
     grid-row: 2/3;
     justify-self: center;
   }
   &__name {
     font-size: rem(20);
     padding: rem(10);
+    grid-column: 1/3;
     grid-row: 1/2;
     align-self: center;
   }
   &__text {
     &--species {
-      font-size: rem(18);
+      font-size: rem(16);
       padding: rem(10);
       grid-row: 3/4;
+      align-self: center;
+    }
+    &--status {
+      font-size: rem(16);
+      padding: rem(10);
+      grid-row: 3/4;
+      align-self: center;
+      text-transform: capitalize;
     }
   }
   &__icon {
     &--species {
       color: $dark;
-      font-size: rem(22);
+      font-size: rem(20);
     }
     &--status {
       color: $dark;
       width: rem(20);
+      font-size: rem(20);
     }
   }
 }
