@@ -16,6 +16,7 @@
   transition: $trans-ease;
   @include tablet {
     width: max-content;
+    padding: rem(10);
     display: grid;
     grid-template-columns: rem(150) auto;
     grid-template-rows: repeat(6, rem(36));
@@ -36,24 +37,6 @@
       text-align: left;
     }
   }
-  &__img {
-    &--parent {
-      align-self: center;
-      justify-self: center;
-      @include tablet {
-        grid-column: 1 / 2;
-        grid-row: 1/6;
-      }
-    }
-    &--child {
-      width: rem(130);
-      border-radius: rem(10);
-      background: fixed;
-      // &:hover {
-      //   transform: scale(1.1);
-      // }
-    }
-  }
   &__name {
     display: flex;
     flex-direction: column;
@@ -65,6 +48,7 @@
     width: 100%;
     @include tablet {
       display: inline;
+      font-size: rem(26);
       grid-column: 2/3;
       grid-row: 1/2;
       text-align: left;
@@ -89,6 +73,7 @@
       @include tablet {
         text-align: left;
         padding-left: rem(10);
+        font-size: rem(20);
       }
     }
     @include tablet {
@@ -125,8 +110,11 @@
     border: $dark solid rem(5);
     padding: 0 rem(5);
     position: relative;
-    left: 97%;
+    left: 95%;
     transition: $trans-ease;
+    @include tablet {
+      left: 100%;
+    }
     &:hover {
       transform: scale(1.1);
       color: $green3;
@@ -145,4 +133,34 @@
       }
     }
   }
+}
+
+// image transition:
+.detail__img--parent {
+  width: rem(130);
+  height: rem(130);
+  border-radius: rem(10);
+  overflow: hidden;
+  align-self: center;
+  justify-self: center;
+  @include tablet {
+    grid-column: 1 / 2;
+    grid-row: 1/6;
+  }
+}
+.detail__img--child {
+  width: 100%;
+  width: 100%;
+  background: fixed;
+  transition: $trans-ease;
+}
+
+.detail__img--parent:hover .detail__img--child,
+.detail__img--parent:focus .detail__img--child {
+  transform: translateY(rem(10)) scale(1.2);
+}
+
+.detail__img--parent:hover .detail__img--child:before,
+.detail__img--parent:focus .detail__img--child:before {
+  display: block;
 }

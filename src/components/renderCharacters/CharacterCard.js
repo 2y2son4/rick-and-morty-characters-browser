@@ -13,7 +13,7 @@ const CharacterCard = (props) => {
     <Link to={`/character/${id}`}>
       <div className="card">
         <h4 className="card__name">{name}</h4>
-        <img className="card__img" src={image} alt={name} />
+        <img className="card__img" src={image} alt={name + ' ´s ugly face'} />
         <p className="card__text--species">
           {species} {icons.species(species)}
         </p>{' '}

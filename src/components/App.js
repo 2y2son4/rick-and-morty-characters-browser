@@ -130,7 +130,7 @@ function App() {
             resetBtn={resetSearch}
           />
           <ChangePage handleLess={handleLess} handleMore={handleMore} page={page} />
-          <CharacterList characters={filteredCharacters} resetBtn={resetSearch} search={name} />{' '}
+          <CharacterList characters={filteredCharacters} resetBtn={resetSearch} search={name} />
           <ChangePage handleLess={handleLess} handleMore={handleMore} page={page} />
         </Route>
         <Route path="/character/:id" render={renderDetail} />

@@ -1,5 +1,5 @@
 /* eslint-disable import/no-anonymous-default-export */
-import { GiTopHat } from 'react-icons/gi';
+import { GiTopHat, GiUnicorn } from 'react-icons/gi';
 import { RiAliensFill } from 'react-icons/ri';
 
 const alienIcon = <RiAliensFill />;
@@ -8,7 +8,7 @@ const humanoidIcon = <i className="fas fa-universal-access card__icon--species" 
 const robotIcon = <i className="fas fa-robot card__icon--species" title="Robot"></i>;
 const cronenbergIcon = <i className="fas fa-pastafarianism card__icon--species" title="Cronenberg"></i>;
 const diseaseIcon = <i className="fas fa-bacteria card__icon--species" title="Disease"></i>;
-const mythologicalIcon = <i className="fas fa-dragon card__icon--species" title="Mythological creature"></i>;
+const mythologicalIcon = <GiUnicorn />;
 const poopyIcon = <GiTopHat />;
 
 const aliveIcon = <i className="fas fa-heartbeat card__icon--status" title="Dead"></i>;

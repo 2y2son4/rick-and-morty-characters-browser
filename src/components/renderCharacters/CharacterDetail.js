@@ -21,7 +21,7 @@ const CharacterDetail = (props) => {
           {name} <span className="detail__lower">({gender})</span>
         </h4>
         <span className="detail__img--parent">
-          <img className="detail__img--child" src={image} alt={'Ugly face of ' + name} />
+          <img className="detail__img--child" src={image} alt={name + ' ´s ugly face'} />
         </span>
         <p className="detail__text--species">
           <span className="detail__bold">Species:</span>{' '}

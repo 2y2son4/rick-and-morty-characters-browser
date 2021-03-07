@@ -11,10 +11,10 @@
     display: none;
   }
   &__img {
-    width: rem(350);
+    width: rem(300);
     margin: rem(10);
     @include tablet {
-      width: rem(450);
+      width: rem(350);
       margin: rem(30);
     }
   }
