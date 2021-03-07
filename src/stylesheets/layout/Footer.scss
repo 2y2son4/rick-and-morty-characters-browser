@@ -10,6 +10,7 @@
     font-size: rem(22);
     font-weight: 600;
     color: $brown1;
+    text-shadow: 0 0 rem(3) $yellow3;
     &--link {
       color: $dark;
       &:hover {

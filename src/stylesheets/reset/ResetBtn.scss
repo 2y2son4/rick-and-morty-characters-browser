@@ -3,42 +3,52 @@
 @import '.././core/Mixins.scss';
 
 .reset {
+  cursor: pointer;
   margin: rem(10);
-  align-self: flex-end;
   background-color: $green1;
   border-radius: 50%;
   border: $yellow3 rem(5) solid;
-  cursor: pointer;
+  box-shadow: rem(1) rem(1) rem(3) $dark;
   transition: $trans-ease;
   &:hover {
     background-color: $blue2;
     border: $dark rem(5) solid;
   }
+  & > svg {
+    font-size: rem(35);
+    &:hover {
+      transform: rotate(-360deg);
+    }
+  }
   &__icon {
-    padding: rem(8);
+    padding: rem(8) rem(6) rem(6);
     color: $yellow3;
-    font-size: rem(24);
     transition: $trans-ease;
     &:hover {
       color: $dark;
     }
   }
   &__notFound {
+    cursor: pointer;
     margin: rem(10);
     background-color: $pink1;
     border-radius: 50%;
     border: $dark rem(5) solid;
-    cursor: pointer;
+    box-shadow: rem(1) rem(1) rem(3) $dark;
     transition: $trans-ease;
     &:hover {
       background-color: $yellow2;
       border: $green1 rem(5) solid;
     }
+    & > svg {
+      font-size: rem(35);
+      &:hover {
+        transform: rotate(-360deg);
+      }
+    }
     &--icon {
-      font-size: rem(24);
-      padding: rem(8);
+      padding: rem(8) rem(6) rem(6);
       color: $dark;
-      font-size: rem(24);
       transition: $trans-ease;
       &:hover {
         color: $green1;

@@ -8,6 +8,8 @@
   padding: rem(10) 0;
 }
 .arrows {
+  width: rem(300);
+  height: rem(46);
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -15,17 +17,15 @@
   background-color: $blue2;
   border: $dark rem(5) solid;
   border-radius: rem(10);
-  width: rem(300);
-  height: rem(46);
   @include tablet {
     width: max-content;
     height: rem(50);
   }
   &__containerL,
   &__containerR {
+    cursor: pointer;
     display: flex;
     align-items: center;
-    cursor: pointer;
     @include tablet {
       margin-right: rem(30);
       margin-left: rem(30);
@@ -48,7 +48,7 @@
     padding: rem(3);
     @include tablet {
       font-size: rem(30);
-      padding: rem(10);
+      padding: rem(5);
     }
   }
   &__text {
