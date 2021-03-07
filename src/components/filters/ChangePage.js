@@ -13,7 +13,7 @@ const ChangePage = (props) => {
       <ul className="arrows">
         <li key="left" className="arrows__containerL" onClick={handleLess}>
           <i className="fas fa-angle-double-left arrows__prev"></i>
-          <span className="arrows__text"> Previous page</span>
+          <p className="arrows__text"> Previous page</p>
         </li>
         <span className="arrows__counter">| Page {page} |</span>
         <li key="right" className="arrows__containerR" onClick={handleMore}>

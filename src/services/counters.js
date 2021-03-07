@@ -1,4 +1,5 @@
 /* eslint-disable import/no-anonymous-default-export */
+
 const handleCounterLess = (state, funcSetState) => {
   state = state - 1;
   return state < 1 ? state : funcSetState(state);
