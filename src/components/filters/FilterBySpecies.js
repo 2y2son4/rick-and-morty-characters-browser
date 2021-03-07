@@ -25,6 +25,24 @@ const FilterBySpecies = (props) => {
         <option className="filter__list--option" value="human">
           Human
         </option>
+        <option className="filter__list--option" value="humanoid">
+          Humanoid
+        </option>
+        <option className="filter__list--option" value="disease">
+          Disease
+        </option>
+        <option className="filter__list--option" value="cronenberg">
+          Cronenberg
+        </option>
+        <option className="filter__list--option" value="mythological">
+          Mythological creature
+        </option>
+        <option className="filter__list--option" value="poopy">
+          Poopybutthole
+        </option>
+        <option className="filter__list--option" value="unknown">
+          Unknown
+        </option>
       </select>
     </fieldset>
   );

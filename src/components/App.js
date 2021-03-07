@@ -57,7 +57,7 @@ function App() {
       })
       // by species
       .filter((character) => {
-        return character.species.toLowerCase().includes(species);
+        return !species || character.species.toLowerCase() === species;
       })
       // by status
       .filter((character) => {
