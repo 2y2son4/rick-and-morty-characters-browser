@@ -64,7 +64,6 @@ function App() {
         return character.status.toLowerCase().includes(status);
       })
       .filter((character) => {
-        // debugger;
         return !gender || character.gender.toLowerCase() === gender;
       });
 

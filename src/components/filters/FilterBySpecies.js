@@ -34,10 +34,10 @@ const FilterBySpecies = (props) => {
         <option className="filter__list--option" value="cronenberg">
           Cronenberg
         </option>
-        <option className="filter__list--option" value="mythological">
+        <option className="filter__list--option" value="mythological creature">
           Mythological creature
         </option>
-        <option className="filter__list--option" value="poopy">
+        <option className="filter__list--option" value="poopybutthole">
           Poopybutthole
         </option>
         <option className="filter__list--option" value="unknown">

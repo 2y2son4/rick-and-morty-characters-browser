@@ -45,12 +45,17 @@
       padding: rem(10);
       grid-row: 3/4;
       align-self: center;
+      & > svg {
+        color: $dark;
+        font-size: rem(20);
+      }
     }
     &--status {
       font-size: rem(16);
       padding: rem(10);
       grid-row: 3/4;
       align-self: center;
+      justify-self: left;
       text-transform: capitalize;
     }
   }
