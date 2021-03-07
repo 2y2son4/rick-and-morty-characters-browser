@@ -25,41 +25,36 @@ function App() {
   // hooks
   const [characters, setCharacters] = useState([]);
   const [filteredCharacters, setFilteredCharacters] = useState([]);
-  const [page, setPage] = useState(1);
-  const [sortDirection, setSortDirection] = useState('AtoZ');
   const [name, setName] = useState(localStorage.get('name', ''));
-  const [species, setSpecies] = useState('');
-  const [status, setStatus] = useState('');
-  const [gender, setGender] = useState('');
+  const [species, setSpecies] = useState(localStorage.get('species', ''));
+  const [status, setStatus] = useState(localStorage.get('status', ''));
+  const [gender, setGender] = useState(localStorage.get('gender', ''));
+  const [page, setPage] = useState(localStorage.get('page', 1));
+  const [sortDirection, setSortDirection] = useState('AtoZ');
 
   // call to API
   useEffect(() => {
     api(page).then((data) => setCharacters(data));
   }, [page]);
 
-  const handleLess = () => {
-    counters.less(page, setPage);
-  };
-
-  const handleMore = () => {
-    counters.more(page, setPage);
-  };
-
+  // local storage
   useEffect(() => {
     localStorage.set('name', name);
-  }, [name]);
+    localStorage.set('species', species);
+    localStorage.set('status', status);
+    localStorage.set('gender', gender);
+    localStorage.set('page', page);
+  }, [name, species, status, gender, page]);
 
+  // filtered and sorted characters array
   useEffect(() => {
     const filteredArray = characters
-      // by name
       .filter((character) => {
         return character.name.toLowerCase().includes(name.toLowerCase());
       })
-      // by species
       .filter((character) => {
         return !species || character.species.toLowerCase() === species;
       })
-      // by status
       .filter((character) => {
         return character.status.toLowerCase().includes(status);
       })
@@ -67,7 +62,6 @@ function App() {
         return !gender || character.gender.toLowerCase() === gender;
       });
 
-    // order by name
     sortDirection === 'AtoZ' ? sortFunc.sortAZ(filteredArray) : sortFunc.sortZA(filteredArray);
 
     setFilteredCharacters(filteredArray);
@@ -77,6 +71,7 @@ function App() {
   const resetSearch = () => {
     setCharacters(characters);
     setSortDirection('AtoZ');
+    setPage(1);
     setName('');
     setSpecies('');
     setStatus('');
@@ -96,6 +91,14 @@ function App() {
     } else if (input.key === 'sort') {
       setSortDirection(input.value);
     }
+  };
+
+  // handler functions to navigate through pages
+  const handleLess = () => {
+    counters.less(page, setPage);
+  };
+  const handleMore = () => {
+    counters.more(page, setPage);
   };
 
   // function to render character detailed card and url id
