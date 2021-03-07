@@ -8,6 +8,7 @@ const humanoidIcon = <i className="fas fa-universal-access card__icon--species" 
 const robotIcon = <i className="fas fa-robot card__icon--species" title="Robot"></i>;
 const cronenbergIcon = <i className="fas fa-pastafarianism card__icon--species" title="Cronenberg"></i>;
 const diseaseIcon = <i className="fas fa-bacteria card__icon--species" title="Disease"></i>;
+const animalIcon = <i className="fas fa-paw card__icon--species" title="Disease"></i>;
 const mythologicalIcon = <GiUnicorn />;
 const poopyIcon = <GiTopHat />;
 
@@ -29,6 +30,8 @@ const iconSpecies = (data) => {
     return diseaseIcon;
   } else if (data === 'Cronenberg') {
     return cronenbergIcon;
+  } else if (data === 'Animal') {
+    return animalIcon;
   } else if (data === 'Mythological Creature') {
     return mythologicalIcon;
   } else if (data === 'Poopybutthole') {
@@ -36,8 +39,6 @@ const iconSpecies = (data) => {
   } else {
     return unknownIcon;
   }
-
-  // return data === 'Alien' ? alienIcon : humanIcon;
 };
 
 const iconStatus = (data) => {

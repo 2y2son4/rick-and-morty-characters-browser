@@ -2,12 +2,12 @@
 
 const handleCounterLess = (state, funcSetState) => {
   state = state - 1;
-  return state < 1 ? state : funcSetState(state);
+  return state < 1 ? funcSetState(34) : funcSetState(state);
 };
 
 const handleCounterMore = (state, funcSetState) => {
   state = state + 1;
-  return state > 34 ? state : funcSetState(state);
+  return state > 34 ? funcSetState(1) : funcSetState(state);
 };
 
 export default {
