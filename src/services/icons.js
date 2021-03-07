@@ -1,4 +1,6 @@
 /* eslint-disable import/no-anonymous-default-export */
+
+// icons
 import { GiTopHat, GiUnicorn } from 'react-icons/gi';
 import { RiAliensFill } from 'react-icons/ri';
 

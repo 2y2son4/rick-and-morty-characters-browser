@@ -155,12 +155,10 @@
   background: fixed;
   transition: $trans-ease;
 }
-
 .detail__img--parent:hover .detail__img--child,
 .detail__img--parent:focus .detail__img--child {
   transform: translateY(rem(10)) scale(1.2);
 }
-
 .detail__img--parent:hover .detail__img--child:before,
 .detail__img--parent:focus .detail__img--child:before {
   display: block;

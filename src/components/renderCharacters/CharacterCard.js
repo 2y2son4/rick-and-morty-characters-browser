@@ -1,9 +1,12 @@
+// React
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
+// icons fuction
 import icons from '../.././services/icons';
 
+// styles
 import '../../stylesheets/renderCharacters/CharacterCard.scss';
 
 const CharacterCard = (props) => {

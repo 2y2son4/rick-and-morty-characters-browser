@@ -1,9 +1,9 @@
 // React
 import React from 'react';
 import PropTypes from 'prop-types';
-import { FaUndoAlt } from 'react-icons/fa';
 
 // icons
+import { FaUndoAlt } from 'react-icons/fa';
 
 // styles:
 import '../../stylesheets/reset/ResetBtn.scss';

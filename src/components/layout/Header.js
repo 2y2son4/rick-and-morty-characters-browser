@@ -1,8 +1,11 @@
+// React
 import React from 'react';
 
-import logo from '../../images/header/logo.png';
-
+// styles
 import '../../stylesheets/layout/Header.scss';
+
+// images
+import logo from '../../images/header/logo.png';
 
 const Header = () => {
   return (

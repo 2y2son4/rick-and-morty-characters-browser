@@ -45,7 +45,7 @@ function App() {
     localStorage.set('page', page);
   }, [name, species, status, gender, page]);
 
-  // filtered and sorted characters array
+  // get filtered and sorted characters array
   useEffect(() => {
     const filteredArray = characters
       .filter((character) => {
@@ -70,14 +70,14 @@ function App() {
   const resetSearch = () => {
     setCharacters(characters);
     setSortDirection('AtoZ');
-    setPage(1);
+    setPage(page);
     setName('');
     setSpecies('');
     setStatus('');
     setGender('');
   };
 
-  // handler function for search
+  // handler function for filters
   const handleFilter = (input) => {
     if (input.key === 'name') {
       setName(input.value);
@@ -100,7 +100,7 @@ function App() {
     counters.more(page, setPage);
   };
 
-  // function to render character detailed card and url id
+  // function to render character detailed card and url id or notavailable page
   const renderDetail = (props) => {
     // parse id to be strictly equal to character.id
     const id = parseInt(props.match.params.id);
