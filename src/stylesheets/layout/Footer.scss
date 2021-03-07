@@ -3,6 +3,8 @@
 @import '.././core/Mixins.scss';
 
 .footer {
+  position: sticky;
+  top: 100%;
   width: 100%;
   height: rem(50);
   padding: rem(5);

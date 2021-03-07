@@ -3,6 +3,8 @@
 @import '.././core/Mixins.scss';
 
 .header {
+  position: sticky;
+  bottom: 100%;
   @include flexCenter {
     flex-direction: column;
   }
