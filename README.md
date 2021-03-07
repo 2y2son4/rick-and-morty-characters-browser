@@ -21,13 +21,26 @@ Filtro por nombre de personaje.
 La APP está dividida en diferentes componentes que permiten la reutilización de código y funcionalidades:
 
 - Filtros.
+<p align="center">
+<img src="./src/images/readme/search_desktop.png">
+</p>
+
 - Listado.
 - Tarjeta de cada personaje.
+
+<p align="center">
+<img src="./src/images/readme/card_desktop.png">
+</p>
+
 - Detalle de cada personaje.
 
 ### 4. **TARJETA DE DETALLE DE PERSONAJE:**
 
 Funcionalidad que permite, al hacer click sobre la tarjeta del personaje de la búsqueda, acceder a una tarjeta con más información sobre el personaje (planeta de origen, localización , número de episodios en los que aparece y género).
+
+<p align="center">
+<img src="./src/images/readme/detail_card_desktop.png">
+</p>
 
 ### 5. **CALIDAD:**
 
@@ -44,6 +57,11 @@ Funcionalidad que permite, al hacer click sobre la tarjeta del personaje de la b
 - Ordenar la lista por orden alfabético y analfabético.
 - Añadir filtros extra: estado, especie y género.
 - Añadir la posibilidad de navegar por las diferentes páginas de personajes del API.
+
+<p align="center">
+<img src="./src/images/readme/nav.gif">
+</p>
+
 - Almacenar en el _local storage_ la información de la búsqueda realizada.
 - Añadir un botón de reset para limpiar todos los campos de búsqueda y filtrado.
 
