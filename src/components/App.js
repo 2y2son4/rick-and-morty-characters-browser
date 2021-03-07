@@ -9,7 +9,6 @@ import sortFunc from '.././services/sortFunctions';
 import counters from '.././services/counters';
 
 // components
-
 import Header from './layout/Header';
 import Footer from './layout/Footer';
 import Filters from './filters/Filters';

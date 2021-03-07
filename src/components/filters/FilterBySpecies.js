@@ -1,3 +1,4 @@
+// React
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -49,6 +50,7 @@ const FilterBySpecies = (props) => {
 };
 
 FilterBySpecies.propTypes = {
+  species: PropTypes.string,
   handleFilter: PropTypes.func,
 };
 

@@ -1,6 +1,8 @@
+// React
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+// styles
 import '../../stylesheets/renderCharacters/CharacterNotAvailable.scss';
 
 const CharacterNotAvailable = () => {

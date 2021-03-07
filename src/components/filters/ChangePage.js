@@ -1,5 +1,8 @@
+// React
 import React from 'react';
+import PropTypes from 'prop-types';
 
+// styles
 import '../.././stylesheets/filters/ChangePage.scss';
 
 const ChangePage = (props) => {
@@ -20,6 +23,12 @@ const ChangePage = (props) => {
       </ul>
     </nav>
   );
+};
+
+ChangePage.propTypes = {
+  page: PropTypes.number,
+  handleMore: PropTypes.func,
+  handleLess: PropTypes.func,
 };
 
 export default ChangePage;

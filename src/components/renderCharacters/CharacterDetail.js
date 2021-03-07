@@ -42,7 +42,7 @@ const CharacterDetail = (props) => {
           <span className="detail__bold">Location:</span> {location}
         </p>
         <p className="detail__text--episodes">
-          <span className="detail__bold">Episodes:</span> {episodes}
+          <span className="detail__bold">Number of episodes:</span> {episodes}
         </p>
       </div>
     </div>
@@ -50,15 +50,7 @@ const CharacterDetail = (props) => {
 };
 
 CharacterDetail.propTypes = {
-  name: PropTypes.string,
-  image: PropTypes.string,
-  gender: PropTypes.string,
-  status: PropTypes.string,
-  origin: PropTypes.string,
-  location: PropTypes.string,
-  species: PropTypes.string,
-  episodes: PropTypes.number,
-  id: PropTypes.number,
+  character: PropTypes.object.isRequired,
 };
 
 export default CharacterDetail;

@@ -1,7 +1,9 @@
+// React
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const SortByName = (props) => {
-  const { handleFilter, sortDirection } = props;
+  const { sortDirection, handleFilter } = props;
 
   const handleSortDirection = (ev) => {
     handleFilter({
@@ -9,6 +11,7 @@ const SortByName = (props) => {
       value: ev.target.value,
     });
   };
+
   return (
     <fieldset className="filter__list">
       <label className="filter__list--label" htmlFor="sort">
@@ -40,6 +43,11 @@ const SortByName = (props) => {
       </label>
     </fieldset>
   );
+};
+
+SortByName.propTypes = {
+  sortDirection: PropTypes.string,
+  handleFilter: PropTypes.func.isRequired,
 };
 
 export default SortByName;

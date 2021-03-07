@@ -24,10 +24,7 @@ const CharacterCard = (props) => {
 };
 
 CharacterCard.propTypes = {
-  name: PropTypes.string,
-  image: PropTypes.string,
-  species: PropTypes.string,
-  id: PropTypes.number,
+  character: PropTypes.object.isRequired,
 };
 
 export default CharacterCard;

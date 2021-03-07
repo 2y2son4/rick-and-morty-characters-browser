@@ -1,3 +1,4 @@
+// React
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -28,6 +29,7 @@ const FilterByGender = (props) => {
 };
 
 FilterByGender.propTypes = {
+  gender: PropTypes.string,
   handleFilter: PropTypes.func,
 };
 

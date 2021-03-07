@@ -1,10 +1,13 @@
+// React
 import React from 'react';
 import PropTypes from 'prop-types';
+
+// components
 import CharacterCard from './CharacterCard';
-
-import '../../stylesheets/renderCharacters/CharacterList.scss';
-
 import CharacterNotFound from './CharacterNotFound';
+
+// styles
+import '../../stylesheets/renderCharacters/CharacterList.scss';
 
 const CharacterList = (props) => {
   const { characters, resetBtn, search } = props;
@@ -30,8 +33,9 @@ const CharacterList = (props) => {
 };
 
 CharacterList.propTypes = {
+  search: PropTypes.string,
   characters: PropTypes.array.isRequired,
-  id: PropTypes.number,
+  resetBtn: PropTypes.func,
 };
 
 export default CharacterList;

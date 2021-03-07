@@ -1,12 +1,17 @@
+// React
 import React from 'react';
+import PropTypes from 'prop-types';
 
+// components
 import ResetBtn from '../reset/ResetBtn';
 
+// styles
 import '../.././stylesheets/renderCharacters/CharacterNotFound.scss';
 
+// images
 import terry from '../.././images/gifs/terry.gif';
 
-const Character = (props) => {
+const CharacterNotFound = (props) => {
   const { resetBtn, search } = props;
   return (
     <div className="notFound">
@@ -19,4 +24,9 @@ const Character = (props) => {
   );
 };
 
-export default Character;
+CharacterNotFound.propTypes = {
+  search: PropTypes.string,
+  resetBtn: PropTypes.func,
+};
+
+export default CharacterNotFound;

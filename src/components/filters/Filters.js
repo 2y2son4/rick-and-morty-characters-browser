@@ -1,15 +1,19 @@
+// React
 import React from 'react';
 import PropTypes from 'prop-types';
 
+// components
 import FilterByName from './FilterByName';
 import FilterBySpecies from './FilterBySpecies';
 import FilterByGender from './FilterByGender';
 import FilterByStatus from './FilterByStatus';
 import ResetBtn from '../reset/ResetBtn';
-
 import SortByName from './SortByName';
 
+// styles
 import '../.././stylesheets/filters/Filters.scss';
+
+// images
 import iconSearch from '../.././images/search/search_icon.png';
 
 const Filters = (props) => {
@@ -41,7 +45,12 @@ const Filters = (props) => {
 
 Filters.propTypes = {
   name: PropTypes.string,
+  species: PropTypes.string,
+  status: PropTypes.string,
+  gender: PropTypes.string,
+  sortDirection: PropTypes.string,
   handleFilter: PropTypes.func.isRequired,
+  resetBtn: PropTypes.func,
 };
 
 export default Filters;
