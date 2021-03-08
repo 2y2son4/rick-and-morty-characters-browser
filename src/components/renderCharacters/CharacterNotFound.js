@@ -17,7 +17,9 @@ const CharacterNotFound = (props) => {
   const textNotFound = !search ? (
     <p className="notFound__text">Your search returned no results, bitch!</p>
   ) : (
-    <p className="notFound__text">Your search for {search} returned no results, bitch!</p>
+    <p className="notFound__text">
+      Your search for <span className="notFound__text--search">{search}</span> returned no results, bitch!
+    </p>
   );
 
   return (

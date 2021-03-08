@@ -47,12 +47,21 @@ Funcionalidad que permite, al hacer click sobre la tarjeta del personaje de la b
 - Semántica de las etiquetas de HTML correcta.
 - Evitar navegación al hacer intro en la búsqueda.
 - Aparición de alertas cuando la búsqueda no arroja ningún resultado.
+
+<p align="center">
+<img src="./src/images/readme/notFound.png">
+</p>
+
 - Filtrado con independencia de mayúsculas y minúsculas.
 - Implementación del almacenamiento local para guardar las búsquedas cuando la usuaria entra y sale de las tarjetas de detalle del personaje.
 
 ### 6. **BONUS:**
 
 - Mejoras visuales: mostrar información con iconos, usar grid para las tarjetas, maquetación responsive.
+
+<p align="center">
+<img src="./src/images/readme/detail_card_mobile.png">
+</p>
 - Crear URL dinámicas para las tarjetas de personaje y URL para personajes inexistentes.
 - Ordenar la lista por orden alfabético y analfabético.
 - Añadir filtros extra: estado, especie y género.
