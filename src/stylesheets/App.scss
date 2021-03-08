@@ -1,12 +1,9 @@
 @import './core/Variables.scss';
 @import './core/Mixins.scss';
 
-.App {
+.App-header {
   text-align: center;
   background: url('../images/bg/bg1.jpg') no-repeat center / cover fixed;
-}
-
-.App-header {
   background-color: $dark;
   min-height: 100vh;
   @include flexCenter {

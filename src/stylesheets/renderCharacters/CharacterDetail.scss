@@ -145,8 +145,10 @@
   align-self: center;
   justify-self: center;
   @include tablet {
+    width: rem(150);
+    height: rem(150);
     grid-column: 1 / 2;
-    grid-row: 2/6;
+    grid-row: 3/6;
   }
 }
 .detail__img--child {

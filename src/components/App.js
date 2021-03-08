@@ -12,24 +12,30 @@ import counters from '.././services/counters';
 import Header from './layout/Header';
 import Footer from './layout/Footer';
 import Filters from './filters/Filters';
+import ChangePage from './filters/ChangePage';
 import CharacterList from './renderCharacters/CharacterList';
 import CharacterDetail from './renderCharacters/CharacterDetail';
 import CharacterNotAvailable from './renderCharacters/CharacterNotAvailable';
-import ChangePage from './filters/ChangePage';
 
 // styles
 import '.././stylesheets/App.scss';
 
 function App() {
   // hooks
+
+  // characters array from api
   const [characters, setCharacters] = useState([]);
+
+  // filtered and sorted characters array
   const [filteredCharacters, setFilteredCharacters] = useState([]);
+  const [sortDirection, setSortDirection] = useState('AtoZ');
+
   const [name, setName] = useState(localStorage.get('name', ''));
   const [species, setSpecies] = useState(localStorage.get('species', ''));
   const [status, setStatus] = useState(localStorage.get('status', ''));
   const [gender, setGender] = useState(localStorage.get('gender', ''));
+
   const [page, setPage] = useState(localStorage.get('page', 1));
-  const [sortDirection, setSortDirection] = useState('AtoZ');
 
   // call to API
   useEffect(() => {
@@ -100,11 +106,12 @@ function App() {
     counters.more(page, setPage);
   };
 
-  // function to render character detailed card and url id or notavailable page
+  // function to render character detailed card and url id or notAvailable page
   const renderDetail = (props) => {
-    // parse id to be strictly equal to character.id
+    // parse id (string) to be strictly equal to character.id (number)
     const id = parseInt(props.match.params.id);
 
+    // find clicked character
     const selectedCharacter = characters.find((character) => {
       return character.id === id;
     });
