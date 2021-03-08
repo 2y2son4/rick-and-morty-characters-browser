@@ -1,9 +1,11 @@
 /* eslint-disable import/no-anonymous-default-export */
 
 // icons
-import { GiTopHat, GiUnicorn } from 'react-icons/gi';
+import { GiUnicorn } from 'react-icons/gi';
 import { RiAliensFill } from 'react-icons/ri';
 import { IoMdPlanet } from 'react-icons/io';
+
+import poopyButthole from '../images/icons/poopy_icon.svg';
 
 const alienIcon = <RiAliensFill />;
 const animalIcon = <i className="fas fa-paw card__icon--species" title="Disease"></i>;
@@ -13,7 +15,8 @@ const humanIcon = <i className="fas fa-child card__icon--species" title="Human">
 const humanoidIcon = <i className="fas fa-universal-access card__icon--species" title="Humanoid"></i>;
 const mythologicalIcon = <GiUnicorn />;
 const planetIcon = <IoMdPlanet />;
-const poopyIcon = <GiTopHat />;
+const poopyIcon = <img src={poopyButthole} alt="poopybutthole" className="card__icon--species card__icon--poopy" />;
+
 const robotIcon = <i className="fas fa-robot card__icon--species" title="Robot"></i>;
 
 const aliveIcon = <i className="fas fa-heartbeat card__icon--status" title="Dead"></i>;
