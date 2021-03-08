@@ -1,8 +1,10 @@
 /* eslint-disable import/no-anonymous-default-export */
 
+import apiInfo from '.././services/apiInfo';
+
 const handleCounterLess = (state, funcSetState) => {
   state = state - 1;
-  return state < 1 ? funcSetState(34) : funcSetState(state);
+  return state < 1 ? apiInfo().then((data) => funcSetState(data)) : funcSetState(state);
 };
 
 const handleCounterMore = (state, funcSetState) => {

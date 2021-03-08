@@ -25,6 +25,7 @@ const FilterBySpecies = (props) => {
         <option value="human">Human</option>
         <option value="humanoid">Humanoid</option>
         <option value="mythological creature">Mythological creature</option>
+        <option value="planet">Planet</option>
         <option value="poopybutthole">Poopybutthole</option>
         <option value="robot">Robot</option>
         <option value="unknown">Unknown</option>

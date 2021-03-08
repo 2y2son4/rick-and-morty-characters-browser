@@ -70,7 +70,7 @@ function App() {
   const resetSearch = () => {
     setCharacters(characters);
     setSortDirection('AtoZ');
-    setPage(page);
+    setPage(1);
     setName('');
     setSpecies('');
     setStatus('');

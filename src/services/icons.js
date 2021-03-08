@@ -3,16 +3,18 @@
 // icons
 import { GiTopHat, GiUnicorn } from 'react-icons/gi';
 import { RiAliensFill } from 'react-icons/ri';
+import { IoMdPlanet } from 'react-icons/io';
 
 const alienIcon = <RiAliensFill />;
-const humanIcon = <i className="fas fa-child card__icon--species" title="Human"></i>;
-const humanoidIcon = <i className="fas fa-universal-access card__icon--species" title="Humanoid"></i>;
-const robotIcon = <i className="fas fa-robot card__icon--species" title="Robot"></i>;
+const animalIcon = <i className="fas fa-paw card__icon--species" title="Disease"></i>;
 const cronenbergIcon = <i className="fas fa-pastafarianism card__icon--species" title="Cronenberg"></i>;
 const diseaseIcon = <i className="fas fa-bacteria card__icon--species" title="Disease"></i>;
-const animalIcon = <i className="fas fa-paw card__icon--species" title="Disease"></i>;
+const humanIcon = <i className="fas fa-child card__icon--species" title="Human"></i>;
+const humanoidIcon = <i className="fas fa-universal-access card__icon--species" title="Humanoid"></i>;
 const mythologicalIcon = <GiUnicorn />;
+const planetIcon = <IoMdPlanet />;
 const poopyIcon = <GiTopHat />;
+const robotIcon = <i className="fas fa-robot card__icon--species" title="Robot"></i>;
 
 const aliveIcon = <i className="fas fa-heartbeat card__icon--status" title="Dead"></i>;
 const DeadIcon = <i className="fas fa-skull card__icon--status" title="Dead"></i>;
@@ -36,6 +38,8 @@ const iconSpecies = (data) => {
     return animalIcon;
   } else if (data === 'Mythological Creature') {
     return mythologicalIcon;
+  } else if (data === 'Planet') {
+    return planetIcon;
   } else if (data === 'Poopybutthole') {
     return poopyIcon;
   } else {

@@ -56,14 +56,15 @@ Funcionalidad que permite, al hacer click sobre la tarjeta del personaje de la b
 - Crear URL dinámicas para las tarjetas de personaje y URL para personajes inexistentes.
 - Ordenar la lista por orden alfabético y analfabético.
 - Añadir filtros extra: estado, especie y género.
+
+- Añadir un botón de reset para limpiar todos los campos de búsqueda y filtrado.
 - Añadir la posibilidad de navegar por las diferentes páginas de personajes del API.
 
 <p align="center">
-<img src="./src/images/readme/nav.gif">
+<img src="./src/images/readme/reset.gif">
 </p>
 
 - Almacenar en el _local storage_ la información de la búsqueda realizada.
-- Añadir un botón de reset para limpiar todos los campos de búsqueda y filtrado.
 
 ## Instalar todo lo necesario para disfrutar del proyecto:
 
