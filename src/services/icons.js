@@ -16,11 +16,10 @@ const humanoidIcon = <i className="fas fa-universal-access card__icon--species" 
 const mythologicalIcon = <GiUnicorn />;
 const planetIcon = <IoMdPlanet />;
 const poopyIcon = <img src={poopyButthole} alt="poopybutthole" className="card__icon--species card__icon--poopy" />;
-
 const robotIcon = <i className="fas fa-robot card__icon--species" title="Robot"></i>;
 
 const aliveIcon = <i className="fas fa-heartbeat card__icon--status" title="Dead"></i>;
-const DeadIcon = <i className="fas fa-skull card__icon--status" title="Dead"></i>;
+const deadIcon = <i className="fas fa-skull card__icon--status" title="Dead"></i>;
 
 const unknownIcon = <i className="fas fa-question-circle card__icon--status" title="Status unknown"></i>;
 
@@ -54,7 +53,7 @@ const iconStatus = (data) => {
   if (data === 'Alive') {
     return aliveIcon;
   } else if (data === 'Dead') {
-    return DeadIcon;
+    return deadIcon;
   } else {
     return unknownIcon;
   }

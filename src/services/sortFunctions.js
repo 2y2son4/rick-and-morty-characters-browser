@@ -3,8 +3,8 @@
 // from a to z
 const sortAtoZ = (arr) => {
   return arr.sort((a, b) => {
-    let characterA = a.name.toUpperCase();
-    let characterB = b.name.toUpperCase();
+    let characterA = a.name;
+    let characterB = b.name;
     if (characterA < characterB) {
       return -1;
     }
@@ -18,8 +18,8 @@ const sortAtoZ = (arr) => {
 // from z to a
 const sortZtoA = (arr) => {
   return arr.sort((a, b) => {
-    let characterA = a.name.toUpperCase();
-    let characterB = b.name.toUpperCase();
+    let characterA = a.name;
+    let characterB = b.name;
     if (characterA > characterB) {
       return -1;
     }

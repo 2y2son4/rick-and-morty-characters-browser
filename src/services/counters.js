@@ -2,9 +2,12 @@
 
 import apiInfo from '.././services/apiInfo';
 
+const maxPage = apiInfo().then((result) => result);
+
 const handleCounterLess = (state, funcSetState) => {
+  console.log(typeof maxPage, maxPage);
   state = state - 1;
-  return state < 1 ? apiInfo().then((data) => funcSetState(data)) : funcSetState(state);
+  return state < 1 ? funcSetState(34) : funcSetState(state);
 };
 
 const handleCounterMore = (state, funcSetState) => {
