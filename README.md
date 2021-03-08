@@ -1,6 +1,6 @@
 # ![2y2son4](./src/images/favicon2.ico) **Módulo 3 - Evaluación final Adalab - React**
 
-## **Descripción:**
+## **DESCRIPCIÓN:**
 
 Página de búsqueda y filtrado de personajes de la serie de TV _Rick & Morty_. Toda la información se consigue a través del [API de _Rick & Morty_](https://rickandmortyapi.com/). Tras hacer la búsqueda, los personajes encontrados se muestran en tarjetas que podrán clickarse para obtener más información sobre el personaje.
 
