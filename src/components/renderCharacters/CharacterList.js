@@ -10,14 +10,14 @@ import CharacterNotFound from './CharacterNotFound';
 import '../../stylesheets/renderCharacters/CharacterList.scss';
 
 const CharacterList = (props) => {
-  const { characters, resetBtn, search } = props;
+  const { characters, resetBtn, search, page } = props;
 
   const characterElement = characters.map((character) => {
     const { id } = character;
 
     return (
       <li className="list__item" key={id}>
-        <CharacterCard character={character} />
+        <CharacterCard page={page} character={character} />
       </li>
     );
   });

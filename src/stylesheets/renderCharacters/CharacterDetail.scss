@@ -116,7 +116,6 @@
       left: 100%;
     }
     &:hover {
-      transform: scale(1.1);
       color: $green3;
       background-color: $dark;
       border: $green3 solid rem(5);
@@ -128,7 +127,6 @@
       color: $dark;
       transition: $trans-ease;
       &:hover {
-        transform: scale(1.1);
         color: $green3;
       }
     }

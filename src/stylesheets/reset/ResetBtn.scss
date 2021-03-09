@@ -15,7 +15,7 @@
     border: $dark rem(5) solid;
   }
   & > svg {
-    font-size: rem(35);
+    font-size: rem(30);
     &:hover {
       transform: rotate(-360deg);
     }
@@ -41,7 +41,7 @@
       border: $green1 rem(5) solid;
     }
     & > svg {
-      font-size: rem(35);
+      font-size: rem(25);
       &:hover {
         transform: rotate(-360deg);
       }

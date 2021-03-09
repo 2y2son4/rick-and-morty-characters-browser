@@ -6,28 +6,29 @@
   background-color: $pink1;
   border-radius: rem(10);
   border: $dark rem(5) solid;
-  width: rem(350);
   display: flex;
   align-items: center;
   flex-direction: column;
   margin: rem(10);
   @include tablet {
-    width: rem(500);
     justify-content: center;
   }
   &__text {
     color: $dark;
     font-weight: bold;
-    font-size: rem(24);
-    margin: rem(10);
+    font-size: rem(20);
+    margin: rem(5);
     &--search {
       color: $blue2;
     }
+    @include tablet {
+      font-size: rem(24);
+    }
   }
   &__img {
-    width: rem(200);
+    height: rem(150);
     background-color: $pink3;
     border-radius: rem(10);
-    margin: rem(10);
+    margin: rem(5);
   }
 }

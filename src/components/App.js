@@ -139,10 +139,10 @@ function App() {
             resetBtn={resetSearch}
           />
           <ChangePage handleLess={handleLess} handleMore={handleMore} page={page} />
-          <CharacterList characters={filteredCharacters} resetBtn={resetSearch} search={name} />
+          <CharacterList characters={filteredCharacters} resetBtn={resetSearch} search={name} page={page} />
           <ChangePage handleLess={handleLess} handleMore={handleMore} page={page} />
         </Route>
-        <Route path="/character/:id" render={renderDetail} />
+        <Route path="/character/:id&:page" render={renderDetail} />
         <Route component={NotFound} />
       </Switch>
       <Footer />
