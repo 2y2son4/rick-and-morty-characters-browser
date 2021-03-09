@@ -16,6 +16,7 @@ import ChangePage from './filters/ChangePage';
 import CharacterList from './renderCharacters/CharacterList';
 import CharacterDetail from './renderCharacters/CharacterDetail';
 import CharacterNotAvailable from './renderCharacters/CharacterNotAvailable';
+import NotFound from './404/NotFound';
 
 // styles
 import '.././stylesheets/App.scss';
@@ -141,6 +142,7 @@ function App() {
           <ChangePage handleLess={handleLess} handleMore={handleMore} page={page} />
         </Route>
         <Route path="/character/:id" render={renderDetail} />
+        <Route component={NotFound} />
       </Switch>
       <Footer />
     </div>

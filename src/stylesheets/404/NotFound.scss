@@ -1,0 +1,62 @@
+@import '.././core/Functions.scss';
+@import '.././core/Variables.scss';
+@import '.././core/Mixins.scss';
+
+.page404 {
+  &__img {
+    width: rem(300);
+    margin: rem(5);
+    border-radius: rem(10);
+    @include tablet {
+      width: rem(400);
+      margin: rem(15);
+    }
+  }
+  &__text {
+    font-size: rem(18);
+    color: $dark;
+    margin: rem(5);
+    @include tablet {
+      font-size: rem(24);
+      margin: rem(15);
+    }
+  }
+  &__span {
+    @include flexCenter;
+    width: rem(40);
+    height: rem(40);
+    background-color: $pink1;
+    border-radius: 50%;
+    border: $dark solid rem(5);
+    padding: 0 rem(5);
+    position: relative;
+    left: 200px;
+    top: -50px;
+    transition: $trans-ease;
+    @include tablet {
+      left: 270px;
+      top: -50px;
+    }
+    &:hover {
+      transform: scale(1.1);
+      color: $green3;
+      background-color: $dark;
+      border: $green3 solid rem(5);
+    }
+    &--close {
+      padding: rem(5);
+      font-size: rem(24);
+      font-weight: bold;
+      color: $dark;
+      transition: $trans-ease;
+      &:hover {
+        transform: scale(1.1);
+        color: $green3;
+      }
+    }
+  }
+}
+
+a {
+  height: 0;
+}
