@@ -2,8 +2,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+// functions
+
 const FilterBySpecies = (props) => {
-  const { species, handleFilter } = props;
+  const { species, filteredCharacters, handleFilter } = props;
+
+  const filteredSpecies = filteredCharacters.map((data) => data.species);
+  const speciesMapped = [...new Set(filteredSpecies)];
+
+  speciesMapped.sort();
+
+  const toTitleCase = (str) => {
+    return str.replace(/\w\S*/g, function (txt) {
+      return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+    });
+  };
+
+  const speciesOption = speciesMapped.map((specie, i) => (
+    <option key={i} value={specie.toLowerCase()}>
+      {toTitleCase(specie)}
+    </option>
+  ));
 
   const handleChange = (ev) => {
     handleFilter({
@@ -11,6 +30,7 @@ const FilterBySpecies = (props) => {
       value: ev.target.value,
     });
   };
+
   return (
     <fieldset className="filter__list">
       <label className="filter__list--label" htmlFor="species">
@@ -18,17 +38,7 @@ const FilterBySpecies = (props) => {
       </label>
       <select className="filter__list--input" name="species" id="species" value={species} onChange={handleChange}>
         <option value="">All</option>
-        <option value="alien">Alien</option>
-        <option value="animal">Animal</option>
-        <option value="cronenberg">Cronenberg</option>
-        <option value="disease">Disease</option>
-        <option value="human">Human</option>
-        <option value="humanoid">Humanoid</option>
-        <option value="mythological creature">Mythological creature</option>
-        <option value="planet">Planet</option>
-        <option value="poopybutthole">Poopybutthole</option>
-        <option value="robot">Robot</option>
-        <option value="unknown">Unknown</option>
+        {speciesOption}
       </select>
     </fieldset>
   );

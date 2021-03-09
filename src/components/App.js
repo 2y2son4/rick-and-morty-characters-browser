@@ -134,6 +134,7 @@ function App() {
             gender={gender}
             species={species}
             sortDirection={sortDirection}
+            filteredCharacters={filteredCharacters}
             handleFilter={handleFilter}
             resetBtn={resetSearch}
           />

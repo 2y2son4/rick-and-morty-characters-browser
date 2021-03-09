@@ -3,7 +3,24 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const FilterByGender = (props) => {
-  const { gender, handleFilter } = props;
+  const { gender, handleFilter, filteredCharacters } = props;
+
+  const filteredGenders = filteredCharacters.map((data) => data.gender);
+  const genderMapped = [...new Set(filteredGenders)];
+
+  genderMapped.sort();
+
+  const toTitleCase = (str) => {
+    return str.replace(/\w\S*/g, function (txt) {
+      return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+    });
+  };
+
+  const genderOption = genderMapped.map((gender, i) => (
+    <option key={i} value={gender.toLowerCase()}>
+      {toTitleCase(gender)}
+    </option>
+  ));
 
   const handleChange = (ev) => {
     handleFilter({
@@ -19,10 +36,7 @@ const FilterByGender = (props) => {
       </label>
       <select className="filter__list--input" name="gender" id="gender" value={gender} onChange={handleChange}>
         <option value="">All</option>
-        <option value="female">Female</option>
-        <option value="male">Male</option>
-        <option value="genderless">Genderless</option>
-        <option value="unknown">Unknown</option>
+        {genderOption}
       </select>
     </fieldset>
   );

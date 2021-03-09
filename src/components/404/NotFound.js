@@ -13,7 +13,7 @@ const NotFound = (props) => {
           <i className="fas fa-times page404__span--close"></i>
         </span>
       </Link>
-      <p className="page404__text">404 or... "Peace among the worlds to you".</p>
+      <p className="page404__text">Error 404 or... "Peace among the worlds to you".</p>
       <img src={image404} alt="Not found 404" className="page404__img" />
     </div>
   );

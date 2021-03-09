@@ -3,7 +3,24 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const FilterByStatus = (props) => {
-  const { status, handleFilter } = props;
+  const { status, handleFilter, filteredCharacters } = props;
+
+  const filteredStatus = filteredCharacters.map((data) => data.status);
+  const statusMapped = [...new Set(filteredStatus)];
+
+  statusMapped.sort();
+
+  const toTitleCase = (str) => {
+    return str.replace(/\w\S*/g, function (txt) {
+      return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+    });
+  };
+
+  const statusOption = statusMapped.map((status, i) => (
+    <option key={i} value={status.toLowerCase()}>
+      {toTitleCase(status)}
+    </option>
+  ));
 
   const handleChange = (ev) => {
     handleFilter({
@@ -18,9 +35,7 @@ const FilterByStatus = (props) => {
       </label>
       <select className="filter__list--input" name="status" id="status" value={status} onChange={handleChange}>
         <option value="">All</option>
-        <option value="alive">Alive</option>
-        <option value="dead">Dead</option>
-        <option value="unknown">Unknown</option>
+        {statusOption}
       </select>
     </fieldset>
   );

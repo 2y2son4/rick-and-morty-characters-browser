@@ -22,7 +22,7 @@ const Filters = (props) => {
     ev.preventDefault();
   };
 
-  const { name, species, status, gender, sortDirection, handleFilter, resetBtn } = props;
+  const { name, species, status, gender, sortDirection, filteredCharacters, handleFilter, resetBtn } = props;
 
   return (
     <section className="filter">
@@ -33,9 +33,9 @@ const Filters = (props) => {
       </h2>
       <form className="filter__container" onSubmit={HandleForm}>
         <FilterByName name={name} handleFilter={handleFilter} />
-        <FilterBySpecies species={species} handleFilter={handleFilter} />
-        <FilterByStatus status={status} handleFilter={handleFilter} />
-        <FilterByGender gender={gender} handleFilter={handleFilter} />
+        <FilterBySpecies species={species} handleFilter={handleFilter} filteredCharacters={filteredCharacters} />
+        <FilterByStatus status={status} handleFilter={handleFilter} filteredCharacters={filteredCharacters} />
+        <FilterByGender gender={gender} handleFilter={handleFilter} filteredCharacters={filteredCharacters} />
         <SortByName sortDirection={sortDirection} handleFilter={handleFilter} />
         <ResetBtn resetBtn={resetBtn} classResetBtn={'reset'} classResetIcon={'reset__icon'} />
       </form>
