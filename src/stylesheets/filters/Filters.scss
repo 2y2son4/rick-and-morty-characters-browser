@@ -26,13 +26,14 @@
     }
   }
   &__title {
-    font-size: rem(28);
+    font-size: rem(24);
     text-shadow: rem(1) rem(1) rem(3) $dark;
     margin: rem(5);
     padding-bottom: rem(5);
     border-bottom: $yellow3 rem(2) solid;
     @include tablet {
       width: 100%;
+      font-size: rem(28);
     }
   }
   &__list {
@@ -44,7 +45,7 @@
       cursor: pointer;
       font-size: rem(16);
       padding-left: rem(5);
-      width: rem(80);
+      width: rem(75);
       height: rem(30);
       border-radius: rem(5);
       margin: rem(5);

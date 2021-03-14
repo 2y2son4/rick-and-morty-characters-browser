@@ -77,7 +77,7 @@ function App() {
   const resetSearch = () => {
     setCharacters(characters);
     setSortDirection('AtoZ');
-    setPage(1);
+    // setPage(1);
     setName('');
     setSpecies('');
     setStatus('');
@@ -123,6 +123,10 @@ function App() {
     }
   };
 
+  const renderPage = (props) => {
+    console.log(props);
+  };
+
   return (
     <div className="App App-header">
       <Header />
@@ -142,7 +146,7 @@ function App() {
           <CharacterList characters={filteredCharacters} resetBtn={resetSearch} search={name} page={page} />
           <ChangePage handleLess={handleLess} handleMore={handleMore} page={page} />
         </Route>
-        <Route path="/character/:id&:page" render={renderDetail} />
+        <Route path="/page/:page/character/:id" render={renderDetail} />
         <Route component={NotFound} />
       </Switch>
       <Footer />

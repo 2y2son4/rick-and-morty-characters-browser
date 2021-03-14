@@ -2,7 +2,12 @@
 
 import apiInfo from '.././services/apiInfo';
 
-console.log(apiInfo().then((result) => result));
+const maxPage = apiInfo().then((result) => {
+  console.log(result);
+  return result;
+});
+
+console.log(maxPage);
 
 const handleCounterLess = (state, funcSetState) => {
   state = state - 1;
