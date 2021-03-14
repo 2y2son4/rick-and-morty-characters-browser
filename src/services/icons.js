@@ -62,4 +62,17 @@ const iconStatus = (data) => {
 export default {
   species: iconSpecies,
   status: iconStatus,
+  alienIcon: alienIcon,
+  animalIcon: animalIcon,
+  cronenbergIcon: cronenbergIcon,
+  diseaseIcon: diseaseIcon,
+  humanIcon: humanIcon,
+  humanoidIcon: humanoidIcon,
+  mythologicalIcon: mythologicalIcon,
+  planetIcon: planetIcon,
+  poopyIcon: poopyIcon,
+  robotIcon: robotIcon,
+  aliveIcon: aliveIcon,
+  deadIcon: deadIcon,
+  unknownIcon: unknownIcon,
 };

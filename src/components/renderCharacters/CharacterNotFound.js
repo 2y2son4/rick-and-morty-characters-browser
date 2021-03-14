@@ -23,11 +23,11 @@ const CharacterNotFound = (props) => {
   );
 
   return (
-    <div className="notFound">
+    <article className="notFound">
       {textNotFound}
       <img className="notFound__img" src={terry} alt="Sorry, no results, bitch!" />
       <ResetBtn resetBtn={resetBtn} classResetBtn={'reset__notFound'} classResetIcon={'reset__notFound--icon'} />
-    </div>
+    </article>
   );
 };
 

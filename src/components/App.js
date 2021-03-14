@@ -20,6 +20,7 @@ import NotFound from './404/NotFound';
 
 // styles
 import '.././stylesheets/App.scss';
+import Key from './layout/Key';
 
 function App() {
   // hooks
@@ -144,6 +145,7 @@ function App() {
           />
           <ChangePage handleLess={handleLess} handleMore={handleMore} page={page} />
           <CharacterList characters={filteredCharacters} resetBtn={resetSearch} search={name} page={page} />
+          <Key />
           <ChangePage handleLess={handleLess} handleMore={handleMore} page={page} />
         </Route>
         <Route path="/page/:page/character/:id" render={renderDetail} />

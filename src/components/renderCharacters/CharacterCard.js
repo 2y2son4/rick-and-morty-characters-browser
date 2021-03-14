@@ -18,9 +18,7 @@ const CharacterCard = (props) => {
       <article className="card">
         <h4 className="card__name">{name}</h4>
         <img className="card__img" src={image} alt={name + ' ´s ugly face'} />
-        <p className="card__text--species">
-          {species} {icons.species(species)}
-        </p>{' '}
+        <p className="card__text--species">{icons.species(species)}</p>{' '}
         <p className="card__text--status">{icons.status(status)}</p>
       </article>
     </Link>

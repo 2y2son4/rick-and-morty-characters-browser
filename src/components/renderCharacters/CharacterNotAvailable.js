@@ -7,7 +7,7 @@ import '../../stylesheets/renderCharacters/CharacterNotAvailable.scss';
 
 const CharacterNotAvailable = () => {
   return (
-    <div>
+    <article>
       <Link to="/">
         <span className="detail__span">
           <i className="fas fa-times detail__span--close"></i>
@@ -16,7 +16,7 @@ const CharacterNotAvailable = () => {
       <div className="notAvailable">
         <div className="notAvailable__img" alt="Character not found. Aw geez"></div>
       </div>
-    </div>
+    </article>
   );
 };
 

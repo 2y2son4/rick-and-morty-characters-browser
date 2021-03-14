@@ -2,7 +2,7 @@
 @import '.././core/Mixins.scss';
 
 .list {
-  max-width: rem(1100);
+  max-width: rem(1200);
   @include flexCenter {
     flex-wrap: wrap;
   }
