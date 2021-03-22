@@ -124,9 +124,9 @@ function App() {
     }
   };
 
-  const renderPage = (props) => {
-    console.log(props);
-  };
+  // const renderPage = (props) => {
+  //   console.log(props);
+  // };
 
   return (
     <div className="App App-header">

@@ -21,7 +21,7 @@ const CharacterDetail = (props) => {
       </Link>
       <article className="detail">
         <h4 className="detail__name">
-          {name} <span className="detail__lower">({gender})</span>
+          {name} <span className="detail__lower">{icons.gender(gender)}</span>
         </h4>
         <span className="detail__img--parent">
           <img className="detail__img--child" src={image} alt={name + ' ´s ugly face'} />

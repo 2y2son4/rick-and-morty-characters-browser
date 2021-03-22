@@ -42,7 +42,9 @@
     }
   }
   &__text {
-    &--species, &--status  {
+    &--species,
+    &--status,
+    &--gender {
       font-size: rem(16);
       padding: rem(10);
       grid-row: 3/4;
@@ -54,7 +56,9 @@
     }
   }
   &__icon {
-    &--species, &--status  {
+    &--species,
+    &--status,
+    &--gender {
       color: $dark;
       font-size: rem(20);
     }

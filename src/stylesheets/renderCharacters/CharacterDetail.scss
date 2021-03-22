@@ -23,7 +23,7 @@
     grid-auto-columns: auto;
   }
   &__bold {
-    font-weight: bold;  
+    font-weight: bold;
   }
   &__lower {
     text-transform: lowercase;
@@ -31,7 +31,7 @@
   &__name {
     @include flexCenter {
       flex-direction: column;
-    }    
+    }
     font-size: rem(22);
     padding: rem(5) rem(10);
     width: 100%;
@@ -47,6 +47,7 @@
   &__text {
     &--status,
     &--species,
+    &--gender,
     &--origin,
     &--location,
     &--episodes {

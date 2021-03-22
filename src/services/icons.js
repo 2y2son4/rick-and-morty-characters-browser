@@ -21,6 +21,10 @@ const robotIcon = <i className="fas fa-robot card__icon--species" title="Robot">
 const aliveIcon = <i className="fas fa-heartbeat card__icon--status" title="Dead"></i>;
 const deadIcon = <i className="fas fa-skull card__icon--status" title="Dead"></i>;
 
+const femaleIcon = <i class="fas fa-venus card__icon--gender"></i>;
+const maleIcon = <i class="fas fa-mars card__icon--gender"></i>;
+const genderlessIcon = <i class="fas fa-genderless card__icon--gender"></i>;
+
 const unknownIcon = <i className="fas fa-question-circle card__icon--status" title="Status unknown"></i>;
 
 const iconSpecies = (data) => {
@@ -59,9 +63,22 @@ const iconStatus = (data) => {
   }
 };
 
+const iconGender = (data) => {
+  if (data === 'Female') {
+    return femaleIcon;
+  } else if (data === 'Male') {
+    return maleIcon;
+  } else if (data === 'Genderless') {
+    return genderlessIcon;
+  } else {
+    return unknownIcon;
+  }
+};
+
 export default {
   species: iconSpecies,
   status: iconStatus,
+  gender: iconGender,
   alienIcon: alienIcon,
   animalIcon: animalIcon,
   cronenbergIcon: cronenbergIcon,
@@ -75,4 +92,7 @@ export default {
   aliveIcon: aliveIcon,
   deadIcon: deadIcon,
   unknownIcon: unknownIcon,
+  femaleIcon: femaleIcon,
+  maleIcon: maleIcon,
+  genderlessIcon: genderlessIcon,
 };
