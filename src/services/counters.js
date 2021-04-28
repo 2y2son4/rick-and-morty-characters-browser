@@ -2,24 +2,22 @@
 
 import apiInfo from '.././services/apiInfo';
 
-const maxPage = apiInfo().then((result) => {
-  console.log(result);
-  return result;
-});
-
-console.log(maxPage);
-
-const handleCounterLess = (state, funcSetState) => {
+const prev = (state, funcSetState) => {
   state = state - 1;
-  return state < 1 ? funcSetState(34) : funcSetState(state);
+  return state < 1
+    ? apiInfo().then((maxPage) => {
+        console.log(maxPage);
+        return funcSetState(maxPage);
+      })
+    : funcSetState(state);
 };
 
-const handleCounterMore = (state, funcSetState) => {
+const next = (state, funcSetState) => {
   state = state + 1;
   return state > 34 ? funcSetState(1) : funcSetState(state);
 };
 
 export default {
-  less: handleCounterLess,
-  more: handleCounterMore,
+  prev: prev,
+  next: next,
 };

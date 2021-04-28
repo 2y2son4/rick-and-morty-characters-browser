@@ -102,10 +102,10 @@ function App() {
 
   // handler functions to navigate through pages
   const handleLess = () => {
-    counters.less(page, setPage);
+    counters.prev(page, setPage);
   };
   const handleMore = () => {
-    counters.more(page, setPage);
+    counters.next(page, setPage);
   };
 
   // function to render character detailed card and url id or notAvailable page
@@ -125,7 +125,24 @@ function App() {
   };
 
   // const renderPage = (props) => {
+  //   const pageNav = parseInt(props.match.params.page);
+  //   console.log(pageNav);
   //   console.log(props);
+
+  //   const actualPage = page.find((pag) => {
+  //     return pag === pageNav;
+  //   });
+
+  //   if (actualPage) {
+  //     return (
+  //       <>
+  //         <CharacterList characters={filteredCharacters} resetBtn={resetSearch} search={name} page={page} />
+  //         <Key />
+  //       </>
+  //     );
+  //   } else {
+  //     return <CharacterNotAvailable />;
+  //   }
   // };
 
   return (
@@ -148,7 +165,8 @@ function App() {
           <Key />
           <ChangePage handleLess={handleLess} handleMore={handleMore} page={page} />
         </Route>
-        <Route path="/page/:page/character/:id" render={renderDetail} />
+        {/* <Route path="/page=:pageNav" render={renderPage} /> */}
+        <Route path="/page=:page/character=:id" render={renderDetail} />
         <Route component={NotFound} />
       </Switch>
       <Footer />

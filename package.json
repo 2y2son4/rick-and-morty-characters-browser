@@ -1,6 +1,6 @@
 {
   "homepage": "./",
-  "name": "evaluacion-final-adriana-del-teso",
+  "name": "rick-and-morty-characters-browser",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -17,6 +17,7 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-icons": "^4.2.0",
+    "react-paginate": "^7.1.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.2",
     "react-test-renderer": "^17.0.1",

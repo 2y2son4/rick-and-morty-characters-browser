@@ -7,25 +7,32 @@ import { IoMdPlanet } from 'react-icons/io';
 
 import poopyButthole from '../images/icons/poopy_icon.svg';
 
-const alienIcon = <RiAliensFill />;
+const alienIcon = <RiAliensFill title="Alien" />;
 const animalIcon = <i className="fas fa-paw card__icon--species" title="Disease"></i>;
 const cronenbergIcon = <i className="fas fa-pastafarianism card__icon--species" title="Cronenberg"></i>;
 const diseaseIcon = <i className="fas fa-bacteria card__icon--species" title="Disease"></i>;
 const humanIcon = <i className="fas fa-child card__icon--species" title="Human"></i>;
 const humanoidIcon = <i className="fas fa-universal-access card__icon--species" title="Humanoid"></i>;
-const mythologicalIcon = <GiUnicorn />;
-const planetIcon = <IoMdPlanet />;
-const poopyIcon = <img src={poopyButthole} alt="poopybutthole" className="card__icon--species card__icon--poopy" />;
+const mythologicalIcon = <GiUnicorn title="Mythological creature" />;
+const planetIcon = <IoMdPlanet title="Planet" />;
+const poopyIcon = (
+  <img
+    src={poopyButthole}
+    alt="poopybutthole"
+    className="card__icon--species card__icon--poopy"
+    title="Poopybutthole"
+  />
+);
 const robotIcon = <i className="fas fa-robot card__icon--species" title="Robot"></i>;
 
-const aliveIcon = <i className="fas fa-heartbeat card__icon--status" title="Dead"></i>;
+const aliveIcon = <i className="fas fa-heartbeat card__icon--status" title="Alive"></i>;
 const deadIcon = <i className="fas fa-skull card__icon--status" title="Dead"></i>;
 
-const femaleIcon = <i class="fas fa-venus card__icon--gender"></i>;
-const maleIcon = <i class="fas fa-mars card__icon--gender"></i>;
-const genderlessIcon = <i class="fas fa-genderless card__icon--gender"></i>;
+const femaleIcon = <i className="fas fa-venus card__icon--gender" title="Female"></i>;
+const maleIcon = <i className="fas fa-mars card__icon--gender" title="Male"></i>;
+const genderlessIcon = <i className="fas fa-genderless card__icon--gender" title="Genderless"></i>;
 
-const unknownIcon = <i className="fas fa-question-circle card__icon--status" title="Status unknown"></i>;
+const unknownIcon = <i className="fas fa-question-circle card__icon--status" title="Unknown"></i>;
 
 const iconSpecies = (data) => {
   if (data === 'Alien') {

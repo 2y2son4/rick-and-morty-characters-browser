@@ -1,4 +1,4 @@
-# ![2y2son4](./src/images/favicon2.ico) **Módulo 3 - Evaluación final Adalab - React**
+# ![2y2son4](./src/images/favicon2.ico) **Buscador de personajes de Rick y Morty**
 
 ## **DESCRIPCIÓN:**
 

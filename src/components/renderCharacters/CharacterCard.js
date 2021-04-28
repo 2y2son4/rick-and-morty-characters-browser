@@ -14,7 +14,7 @@ const CharacterCard = (props) => {
   const { name, image, species, id, status } = props.character;
 
   return (
-    <Link to={`/page/${page}/character/${id}`}>
+    <Link to={`/page=${page}/character=${id}`}>
       <article className="card">
         <h4 className="card__name">{name}</h4>
         <img className="card__img" src={image} alt={name + ' ´s ugly face'} />
