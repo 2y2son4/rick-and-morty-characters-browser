@@ -14,7 +14,7 @@ const prev = (state, funcSetState) => {
 
 const next = (state, funcSetState) => {
   state = state + 1;
-  return state > 34 ? funcSetState(1) : funcSetState(state);
+  return state > 42 ? funcSetState(1) : funcSetState(state);
 };
 
 export default {
