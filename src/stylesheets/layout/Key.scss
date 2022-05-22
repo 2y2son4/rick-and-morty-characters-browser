@@ -30,10 +30,6 @@
       font-size: rem(16);
       margin: rem(5);
       padding: rem(5);
-      transition: $trans-ease;
-      &:hover {
-        transform: scale(1.05);
-      }
     }
   }
 }
