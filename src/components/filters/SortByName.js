@@ -13,33 +13,33 @@ const SortByName = (props) => {
   };
 
   return (
-    <fieldset className="filter__list">
-      <label className="filter__list--label" htmlFor="sort">
+    <fieldset className='filter__list'>
+      <label className='filter__list--label' htmlFor='sort'>
         Sort:
       </label>
-      <label className="filter__list--label-radio" htmlFor="AtoZ">
+      <label className='filter__list--label-radio' htmlFor='AtoZ' aria-label='sort from A to Z'>
         <input
-          className="filter__list--radio"
-          type="radio"
-          name="sort"
-          id="AtoZ"
-          value="AtoZ"
+          className='filter__list--radio'
+          type='radio'
+          name='sort'
+          id='AtoZ'
+          value='AtoZ'
           checked={sortDirection === 'AtoZ'}
           onChange={handleSortDirection}
         />{' '}
-        <i className="fas fa-sort-alpha-down filter__list--radio-icon"></i>
+        <i className='fas fa-sort-alpha-down filter__list--radio-icon'></i>
       </label>
-      <label className="filter__list--label-radio" htmlFor="Zto">
+      <label className='filter__list--label-radio' htmlFor='ZtoA' aria-label='sort from Z to A'>
         <input
-          className="filter__list--radio"
-          type="radio"
-          name="sort"
-          id="ZtoA"
-          value="ZtoA"
+          className='filter__list--radio'
+          type='radio'
+          name='sort'
+          id='ZtoA'
+          value='ZtoA'
           checked={sortDirection === 'ZtoA'}
           onChange={handleSortDirection}
         />{' '}
-        <i className="fas fa-sort-alpha-down-alt filter__list--radio-icon"></i>
+        <i className='fas fa-sort-alpha-down-alt filter__list--radio-icon'></i>
       </label>
     </fieldset>
   );

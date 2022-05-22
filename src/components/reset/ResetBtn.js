@@ -15,7 +15,7 @@ const ResetBtn = (props) => {
   };
 
   return (
-    <button className={classResetBtn} onClick={reset}>
+    <button aria-label='Reset button' className={classResetBtn} onClick={reset}>
       <FaUndoAlt className={classResetIcon} />
     </button>
   );

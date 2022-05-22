@@ -14,32 +14,32 @@ const CharacterDetail = (props) => {
 
   return (
     <section>
-      <Link to="/">
-        <span className="detail__span">
-          <i className="fas fa-times detail__span--close"></i>
+      <Link to='/'>
+        <span className='detail__span'>
+          <i className='fas fa-times detail__span--close'></i>
         </span>
       </Link>
-      <article className="detail">
-        <h4 className="detail__name">
-          {name} <span className="detail__lower">{icons.gender(gender)}</span>
-        </h4>
-        <span className="detail__img--parent">
-          <img className="detail__img--child" src={image} alt={name + ' ´s ugly face'} />
+      <article className='detail'>
+        <h3 className='detail__name'>
+          {name} <span className='detail__lower'>{icons.gender(gender)}</span>
+        </h3>
+        <span className='detail__img--parent'>
+          <img className='detail__img--child' src={image} alt={name + ' ´s ugly face'} />
         </span>
-        <p className="detail__text--species">
-          <span className="detail__bold">Species:</span> <span className="detail__lower">{icons.species(species)}</span>
+        <p className='detail__text--species'>
+          <span className='detail__bold'>Species:</span> <span className='detail__lower'>{icons.species(species)}</span>
         </p>
-        <p className="detail__text--status">
-          <span className="detail__bold">Status:</span> <span className="detail__lower">{icons.status(status)}</span>
+        <p className='detail__text--status'>
+          <span className='detail__bold'>Status:</span> <span className='detail__lower'>{icons.status(status)}</span>
         </p>
-        <p className="detail__text--origin">
-          <span className="detail__bold">Origin:</span> {origin}
+        <p className='detail__text--origin'>
+          <span className='detail__bold'>Origin:</span> {origin}
         </p>
-        <p className="detail__text--location">
-          <span className="detail__bold">Location:</span> {location}
+        <p className='detail__text--location'>
+          <span className='detail__bold'>Location:</span> {location}
         </p>
-        <p className="detail__text--episodes">
-          <span className="detail__bold">Number of episodes:</span> {episodes}
+        <p className='detail__text--episodes'>
+          <span className='detail__bold'>Number of episodes:</span> {episodes}
         </p>
       </article>
     </section>
