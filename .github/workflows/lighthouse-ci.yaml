@@ -1,0 +1,17 @@
+name: Lighthouse CI
+on: [push]
+jobs:
+  lhci:
+    name: Lighthouse CI
+    runs-on: ubuntu latest
+    steps:
+      - uses: actions/checkoutput@v1
+      - name: Use Node.js 16.x
+      used: actions/setup-node@v1
+      with: node-version 16.x
+      - name: Install dependencies
+      run: npm install
+      - name: run Lighthouse CI
+      run: ./node_modules/.bin/lhci autorun --config=/lighthouserc.js
+      env: 
+       LHCI_TOKEN: ${{secrets.LHCI_GITHUB_RICKYMORTY_TOKEN}}
