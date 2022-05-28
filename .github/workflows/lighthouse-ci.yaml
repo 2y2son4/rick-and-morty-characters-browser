@@ -14,4 +14,4 @@ jobs:
       - name: run Lighthouse CI
         run: ./node_modules/.bin/lhci autorun --config=/lighthouserc.js
         env:
-        LHCI_TOKEN: ${{secrets.LHCI_GITHUB_RICKYMORTY_TOKEN}}
+          LHCI_TOKEN: ${{secrets.LHCI_GITHUB_RICKYMORTY_TOKEN}}
